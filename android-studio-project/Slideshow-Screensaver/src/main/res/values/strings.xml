@@ -2,4 +2,17 @@
 <resources>
   <string name="app_name">Slideshow Screensaver</string>
   <string name="image_content_description">Photo</string>
+
+  <!-- Settings strings. -->
+  <string name="pref_value_enabled">Enabled</string>
+  <string name="pref_value_disabled">Disabled</string>
+
+  <string name="pref_settings_key">settings_key</string>
+  <string name="pref_settings_title">Slideshow Settings</string>
+
+  <string name="pref_imageduration_key">pref_imageduration</string>
+  <string name="pref_imageduration_title">Time Duration (ms)</string>
+  <string name="pref_imageduration_dlg">Enter time duration (ms) to display images:</string>
+  <string name="pref_imageduration_default">2500</string>
+
 </resources>

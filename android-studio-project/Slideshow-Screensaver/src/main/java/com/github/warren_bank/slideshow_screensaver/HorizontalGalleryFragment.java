@@ -1,5 +1,6 @@
 package com.github.warren_bank.slideshow_screensaver;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -8,66 +9,85 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.integration.recyclerview.RecyclerViewPreloader;
 import java.util.List;
 
 /** Displays media store data in a recycler view. */
-public class HorizontalGalleryFragment extends Fragment
-    implements LoaderManager.LoaderCallbacks<List<MediaStoreData>> {
+public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoadCompleteListener<List<MediaStoreData>> {
 
+  private Context context;
   private RecyclerView recyclerView;
+
+  public HorizontalGalleryFragment() {
+    this((Context) null);
+  }
+
+  public HorizontalGalleryFragment(Context context) {
+    super();
+
+    this.context = context;
+
+    if (context != null)
+      init();
+  }
+
+  @Override
+  public Context getContext() {
+    if (context != null)
+      return context;
+
+    context = getActivity();
+    if (context != null)
+      return context;
+
+    context = super.getContext();
+    return context;
+  }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    getLoaderManager().initLoader(R.id.loader_id_media_store_data, null, this);
+    init();
   }
 
   @Override
-  public View onCreateView(
-      @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+  public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     View result = inflater.inflate(R.layout.recycler_view, container, false);
     recyclerView = (RecyclerView) result.findViewById(R.id.recycler_view);
-    GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 1);
-    layoutManager.setOrientation(RecyclerView.HORIZONTAL);
+    LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+    layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
     recyclerView.setLayoutManager(layoutManager);
     recyclerView.setHasFixedSize(true);
 
     return result;
   }
 
-  @Override
-  public Loader<List<MediaStoreData>> onCreateLoader(int i, Bundle bundle) {
-    return new MediaStoreDataLoader(getActivity());
+  public void init() {
+    Loader<List<MediaStoreData>> loader = new MediaStoreDataLoader(getContext());
+    loader.registerListener(R.id.loader_id_media_store_data, this);
+    loader.startLoading();
   }
 
   @Override
-  public void onLoadFinished(
-      Loader<List<MediaStoreData>> loader, List<MediaStoreData> mediaStoreData) {
-    GlideRequests glideRequests = GlideApp.with(this);
-    RecyclerAdapter adapter = new RecyclerAdapter(getActivity(), mediaStoreData, glideRequests);
-    RecyclerViewPreloader<MediaStoreData> preloader =
-        new RecyclerViewPreloader<>(glideRequests, adapter, adapter, 3);
+  public void onLoadComplete(Loader<List<MediaStoreData>> loader, List<MediaStoreData> mediaStoreData) {
+    GlideRequests glideRequests = GlideApp.with(getContext());
+    RecyclerAdapter adapter = new RecyclerAdapter(getContext(), mediaStoreData, glideRequests);
+    RecyclerViewPreloader<MediaStoreData> preloader = new RecyclerViewPreloader<>(glideRequests, adapter, adapter, 3);
     recyclerView.addOnScrollListener(preloader);
     recyclerView.setAdapter(adapter);
 
     initSlideshow(adapter);
   }
 
-  @Override
-  public void onLoaderReset(Loader<List<MediaStoreData>> loader) {
-    // Do nothing.
-  }
-
-  private final int delay = 2500;
-  private int       current_image_index;
-  private Handler   handler;
-  private Runnable  slideshow;
-  private boolean   slideshow_running;
+  private boolean        slideshow_running;
+  private SettingsHelper settings;
+  private int            duration;
+  private int            current_image_index;
+  private Handler        handler;
+  private Runnable       slideshow;
 
   private void initSlideshow(RecyclerAdapter adapter) {
     if (adapter == null) {
@@ -75,6 +95,8 @@ public class HorizontalGalleryFragment extends Fragment
       return;
     }
 
+    settings            = new SettingsHelper(/* context= */ getContext());
+    duration            = settings.getImageDuration();
     current_image_index = -1;
     handler             = new Handler();
     slideshow           = new Runnable() {
@@ -91,7 +113,7 @@ public class HorizontalGalleryFragment extends Fragment
           recyclerView.scrollToPosition(current_image_index);
         }
 
-        handler.postDelayed(this, delay);
+        handler.postDelayed(this, duration);
       }
     };
 
@@ -108,17 +130,17 @@ public class HorizontalGalleryFragment extends Fragment
   }
 
   @Override
-  public void onResume () {
+  public void onResume() {
     super.onResume();
 
     if ((handler != null) && !slideshow_running) {
-      handler.postDelayed(slideshow, delay);
+      handler.postDelayed(slideshow, duration);
       slideshow_running = true;
     }
   }
 
   @Override
-  public void onPause () {
+  public void onPause() {
     super.onPause();
 
     if ((handler != null) && slideshow_running) {
