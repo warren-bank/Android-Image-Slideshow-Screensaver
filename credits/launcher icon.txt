@@ -1,0 +1,7 @@
+filepath: android-studio-project/Slideshow-Screensaver/src/main/res/drawable/launcher.png
+source:   https://www.iconfinder.com/icons/1622830/gallery_landskape_mountains_nature_photo_picture_icon
+          https://www.iconfinder.com/icons/1622830/download/png/256
+license:  Creative Commons (Attribution-Share Alike 3.0 Unported)
+            http://creativecommons.org/licenses/by/3.0/
+author:   Laura Reen
+            https://www.iconfinder.com/laurareen
