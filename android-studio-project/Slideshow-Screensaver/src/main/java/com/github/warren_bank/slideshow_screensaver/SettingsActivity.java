@@ -9,13 +9,19 @@ import android.preference.Preference;
 
 public class SettingsActivity extends Activity implements OnSharedPreferenceChangeListener {
   private SettingsFragment settingsFragment;
-  private String keyprefDuration;
+  private String keypref_imageduration;
+  private String keypref_usemediastore;
+  private String keypref_directoryselector;
+  private String keypref_recursedirectory;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    keyprefDuration = getString(R.string.pref_imageduration_key);
+    keypref_imageduration     = getString(R.string.pref_imageduration_key);
+    keypref_usemediastore     = getString(R.string.pref_usemediastore_key);
+    keypref_directoryselector = getString(R.string.pref_directoryselector_key);
+    keypref_recursedirectory  = getString(R.string.pref_recursedirectory_key);
 
     settingsFragment = new SettingsFragment();
     getFragmentManager()
@@ -31,7 +37,12 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
     SharedPreferences sharedPreferences = settingsFragment.getPreferenceScreen().getSharedPreferences();
     sharedPreferences.registerOnSharedPreferenceChangeListener(this);
 
-    updateSummary(sharedPreferences, keyprefDuration);
+    updateSummary( sharedPreferences, keypref_imageduration);
+    updateSummaryB(sharedPreferences, keypref_usemediastore);
+    updateSummary( sharedPreferences, keypref_directoryselector);
+    updateSummaryB(sharedPreferences, keypref_recursedirectory);
+
+    enable_directoryselector(sharedPreferences);
   }
 
   @Override
@@ -44,21 +55,43 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
 
   @Override
   public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-    if (key.equals(keyprefDuration)) {
+    if (
+         key.equals(keypref_imageduration)
+      || key.equals(keypref_directoryselector)
+    ) {
       updateSummary(sharedPreferences, key);
+    }
+
+    if (
+         key.equals(keypref_usemediastore)
+      || key.equals(keypref_recursedirectory)
+    ) {
+      updateSummaryB(sharedPreferences, key);
+    }
+
+    if (key.equals(keypref_usemediastore)) {
+      enable_directoryselector(sharedPreferences);
     }
   }
 
   private void updateSummary(SharedPreferences sharedPreferences, String key) {
+    updateSummary(sharedPreferences, key, /* defaultValue= */ "");
+  }
+
+  private void updateSummary(SharedPreferences sharedPreferences, String key, String defaultValue) {
     Preference updatedPref = settingsFragment.findPreference(key);
 
-    updatedPref.setSummary(sharedPreferences.getString(key, ""));
+    updatedPref.setSummary(sharedPreferences.getString(key, defaultValue));
   }
 
   private void updateSummaryB(SharedPreferences sharedPreferences, String key) {
+    updateSummaryB(sharedPreferences, key, /* defaultValue= */ false);
+  }
+
+  private void updateSummaryB(SharedPreferences sharedPreferences, String key, boolean defaultValue) {
     Preference updatedPref = settingsFragment.findPreference(key);
 
-    updatedPref.setSummary(sharedPreferences.getBoolean(key, true)
+    updatedPref.setSummary(sharedPreferences.getBoolean(key, defaultValue)
       ? getString(R.string.pref_value_enabled)
       : getString(R.string.pref_value_disabled));
   }
@@ -67,6 +100,13 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
     ListPreference updatedPref = (ListPreference) settingsFragment.findPreference(key);
 
     updatedPref.setSummary(updatedPref.getEntry());
+  }
+
+  private void enable_directoryselector(SharedPreferences sharedPreferences) {
+    boolean is_enabled = !sharedPreferences.getBoolean(keypref_usemediastore, false);
+
+    settingsFragment.findPreference(keypref_directoryselector).setEnabled(is_enabled);
+    settingsFragment.findPreference(keypref_recursedirectory ).setEnabled(is_enabled);
   }
 
 }

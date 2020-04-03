@@ -12,6 +12,9 @@ Android daydream/screensaver app to display images on local device as a slidesho
 * [Glide](https://github.com/bumptech/glide) image loading framework for Android
   - [the "gallery" sample from v4.11.0](https://github.com/bumptech/glide/tree/v4.11.0/samples/gallery) is the basis for this project
 
+* [Directory Selector Dialog Preference](https://github.com/lemberg/directory-selector-dialog-preference) library by [Lemberg Solutions](https://lembergsolutions.com/)
+  - makes it simple to add a directory chooser dialog to a `PreferenceFragment` through xml
+
 #### Legal:
 
 * copyright: [Warren Bank](https://github.com/warren-bank)

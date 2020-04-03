@@ -11,8 +11,23 @@
   <string name="pref_settings_title">Slideshow Settings</string>
 
   <string name="pref_imageduration_key">pref_imageduration</string>
-  <string name="pref_imageduration_title">Time Duration (ms)</string>
+  <string name="pref_imageduration_title">Time Duration (ms).</string>
   <string name="pref_imageduration_dlg">Enter time duration (ms) to display images:</string>
   <string name="pref_imageduration_default">2500</string>
+
+  <string name="pref_usemediastore_key">pref_usemediastore</string>
+  <string name="pref_usemediastore_title">Use MediaStore provider.</string>
+  <string name="pref_usemediastore_dlg">Show images from Android\'s index of attached storage devices:</string>
+  <string name="pref_usemediastore_default">true</string>
+
+  <string name="pref_directoryselector_key">pref_directoryselector</string>
+  <string name="pref_directoryselector_title">Directory path.</string>
+  <string name="pref_directoryselector_dlg">Directory:</string>
+  <string name="pref_directoryselector_default">/storage</string>
+
+  <string name="pref_recursedirectory_key">pref_recursedirectory</string>
+  <string name="pref_recursedirectory_title">Recurse into subdirectories.</string>
+  <string name="pref_recursedirectory_dlg">Include images from all subdirectories:</string>
+  <string name="pref_recursedirectory_default">false</string>
 
 </resources>

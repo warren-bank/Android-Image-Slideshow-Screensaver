@@ -11,5 +11,26 @@
       android:defaultValue="@string/pref_imageduration_default"
       android:dialogTitle="@string/pref_imageduration_dlg" />
 
+    <CheckBoxPreference
+      android:key="@string/pref_usemediastore_key"
+      android:title="@string/pref_usemediastore_title"
+      android:dialogTitle="@string/pref_usemediastore_dlg"
+      android:defaultValue="@string/pref_usemediastore_default" />
+
+    <com.ls.directoryselector.DirectoryPreference
+      android:key="@string/pref_directoryselector_key"
+      android:title="@string/pref_directoryselector_title"
+      android:dialogTitle="@string/pref_directoryselector_dlg"
+      android:defaultValue="@string/pref_directoryselector_default"
+      android:summary="Path"
+      android:positiveButtonText="@android:string/ok"
+      android:negativeButtonText="@android:string/cancel" />
+
+    <CheckBoxPreference
+      android:key="@string/pref_recursedirectory_key"
+      android:title="@string/pref_recursedirectory_title"
+      android:dialogTitle="@string/pref_recursedirectory_dlg"
+      android:defaultValue="@string/pref_recursedirectory_default" />
+
   </PreferenceCategory>
 </PreferenceScreen>

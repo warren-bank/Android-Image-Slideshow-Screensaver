@@ -1,1 +1,4 @@
 include ':Slideshow-Screensaver'
+
+include ':DirectoryPreference'
+project(':DirectoryPreference').projectDir = new File(rootDir, 'libs/DirectoryPreference')
