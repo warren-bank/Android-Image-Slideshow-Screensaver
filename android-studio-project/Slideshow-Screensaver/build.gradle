@@ -1,0 +1,55 @@
+apply from: '../constants.gradle'
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion project.ext.compileSdkVersion
+  buildToolsVersion project.ext.buildToolsVersion
+
+  compileOptions {
+    sourceCompatibility project.ext.javaVersion
+    targetCompatibility project.ext.javaVersion
+  }
+
+  defaultConfig {
+    minSdkVersion project.ext.minSdkVersion
+    targetSdkVersion project.ext.targetSdkVersion
+
+    applicationId "com.github.warren_bank.slideshow_screensaver"
+    versionName project.ext.releaseVersion
+    versionCode project.ext.releaseVersionCode
+  }
+
+  buildTypes {
+    release {
+      shrinkResources true
+      minifyEnabled   true
+      proguardFiles = [
+        "proguard-rules.txt",
+        getDefaultProguardFile('proguard-android.txt')
+      ]
+    }
+    debug {
+      debuggable  true
+      jniDebuggable true
+    }
+  }
+
+  lintOptions {
+    disable 'MissingTranslation'
+    abortOnError true
+  }
+}
+
+dependencies {
+  compileOnly         'androidx.annotation:annotation:'                         + project.ext.libVersionAndroidX           // ( 27 KB) https://mvnrepository.com/artifact/androidx.annotation/annotation
+  annotationProcessor 'androidx.annotation:annotation:'                         + project.ext.libVersionAndroidX
+
+  implementation      'androidx.recyclerview:recyclerview:'                     + project.ext.libVersionAndroidX           // (350 KB) https://mvnrepository.com/artifact/androidx.recyclerview/recyclerview
+  implementation      'androidx.fragment:fragment:'                             + project.ext.libVersionAndroidX           // (163 KB) https://mvnrepository.com/artifact/androidx.fragment/fragment
+
+  compileOnly         'com.github.bumptech.glide:compiler:'                     + project.ext.libVersionGlide              // (307 KB) https://mvnrepository.com/artifact/com.github.bumptech.glide/compiler
+  annotationProcessor 'com.github.bumptech.glide:compiler:'                     + project.ext.libVersionGlide
+
+  implementation      'com.github.bumptech.glide:glide:'                        + project.ext.libVersionGlide              // (614 KB) https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
+  implementation      'com.github.bumptech.glide:recyclerview-integration:'     + project.ext.libVersionGlide              // (  4 KB) https://mvnrepository.com/artifact/com.github.bumptech.glide/recyclerview-integration
+}
