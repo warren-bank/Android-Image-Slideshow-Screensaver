@@ -13,6 +13,7 @@ import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.integration.recyclerview.RecyclerViewPreloader;
+import java.io.File;
 import java.util.List;
 
 /** Displays media store data in a recycler view. */
@@ -20,6 +21,7 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
 
   private Context context;
   private RecyclerView recyclerView;
+  private SettingsHelper settings;
 
   public HorizontalGalleryFragment() {
     this((Context) null);
@@ -29,9 +31,6 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     super();
 
     this.context = context;
-
-    if (context != null)
-      init();
   }
 
   @Override
@@ -50,7 +49,6 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    init();
   }
 
   @Override
@@ -62,13 +60,36 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     recyclerView.setLayoutManager(layoutManager);
     recyclerView.setHasFixedSize(true);
 
+    // cannot initialize the list of images in onCreate() because
+    // onLoadComplete requires that recyclerView has been defined.
+    init();
+
     return result;
   }
 
   public void init() {
-    Loader<List<MediaStoreData>> loader = new MediaStoreDataLoader(getContext());
-    loader.registerListener(R.id.loader_id_media_store_data, this);
-    loader.startLoading();
+    settings = new SettingsHelper(/* context= */ getContext());
+
+    boolean use_mediastore = settings.useMediaStore();
+    File directory = null;
+
+    if (!use_mediastore) {
+      directory = settings.getDirectory();
+
+      if (directory == null)
+        use_mediastore = true;
+    }
+
+    if (use_mediastore) {
+      Loader<List<MediaStoreData>> loader = new MediaStoreDataLoader(getContext());
+      loader.registerListener(R.id.loader_id_media_store_data, this);
+      loader.startLoading();
+    }
+    else {
+      boolean recurse = settings.useDirectoryRecursion();
+      List<MediaStoreData> mediaStoreData = DirectoryHelper.getImagesInDirectory(directory, recurse);
+      onLoadComplete(/* loader= */ null, mediaStoreData);
+    }
   }
 
   @Override
@@ -83,7 +104,6 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   }
 
   private boolean        slideshow_running;
-  private SettingsHelper settings;
   private int            duration;
   private int            current_image_index;
   private Handler        handler;
@@ -95,7 +115,6 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
       return;
     }
 
-    settings            = new SettingsHelper(/* context= */ getContext());
     duration            = settings.getImageDuration();
     current_image_index = -1;
     handler             = new Handler();

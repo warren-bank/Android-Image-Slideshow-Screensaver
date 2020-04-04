@@ -1,13 +1,19 @@
 package com.github.warren_bank.slideshow_screensaver;
 
 import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.Manifest.permission;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.widget.Toast;
 
 public class SettingsActivity extends Activity implements OnSharedPreferenceChangeListener {
+  private static final int REQUEST_READ_STORAGE = 0;
+
   private SettingsFragment settingsFragment;
   private String keypref_imageduration;
   private String keypref_usemediastore;
@@ -18,6 +24,38 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
+    if ((Build.VERSION.SDK_INT >= 23) && (checkSelfPermission(permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
+      requestStoragePermission();
+    }
+    else {
+      replaceFragment();
+    }
+  }
+
+  private void requestStoragePermission() {
+    requestPermissions(new String[] {permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_STORAGE);
+  }
+
+  @Override
+  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    switch (requestCode) {
+      case REQUEST_READ_STORAGE : {
+        // If request is cancelled, the result arrays are empty.
+        if ((grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+          replaceFragment();
+        }
+        else {
+          Toast.makeText(this, getString(R.string.toast_storage_permission_denied), Toast.LENGTH_LONG).show();
+          requestStoragePermission();
+        }
+        break;
+      }
+    }
+  }
+
+  private void replaceFragment() {
     keypref_imageduration     = getString(R.string.pref_imageduration_key);
     keypref_usemediastore     = getString(R.string.pref_usemediastore_key);
     keypref_directoryselector = getString(R.string.pref_directoryselector_key);
@@ -103,6 +141,9 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
   }
 
   private void enable_directoryselector(SharedPreferences sharedPreferences) {
+    if (sharedPreferences == null)
+      sharedPreferences = settingsFragment.getPreferenceScreen().getSharedPreferences();
+
     boolean is_enabled = !sharedPreferences.getBoolean(keypref_usemediastore, false);
 
     settingsFragment.findPreference(keypref_directoryselector).setEnabled(is_enabled);

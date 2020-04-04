@@ -30,4 +30,7 @@
   <string name="pref_recursedirectory_dlg">Include images from all subdirectories:</string>
   <string name="pref_recursedirectory_default">false</string>
 
+  <!-- Toast strings. -->
+  <string name="toast_storage_permission_denied">Storage permission is required</string>
+
 </resources>
