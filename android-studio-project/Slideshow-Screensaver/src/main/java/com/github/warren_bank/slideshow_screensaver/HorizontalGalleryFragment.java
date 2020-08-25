@@ -1,8 +1,10 @@
 package com.github.warren_bank.slideshow_screensaver;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -22,6 +24,8 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   private Context context;
   private RecyclerView recyclerView;
   private SettingsHelper settings;
+  private boolean forceRefresh;
+  private GestureDetector gestures;
 
   public HorizontalGalleryFragment() {
     this((Context) null);
@@ -60,6 +64,8 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     recyclerView.setLayoutManager(layoutManager);
     recyclerView.setHasFixedSize(true);
 
+    initGestureDetector();
+
     // cannot initialize the list of images in onCreate() because
     // onLoadComplete requires that recyclerView has been defined.
     init();
@@ -67,7 +73,21 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     return result;
   }
 
-  public void init() {
+  private void initGestureDetector() {
+    forceRefresh = false;
+
+    gestures = new GestureDetector(/* context= */ getContext(), new GestureDetector.SimpleOnGestureListener(){
+      @Override
+      public void onLongPress(MotionEvent e) {
+        // open SettingsActivity
+        Intent intent = new Intent(/* context= */ getContext(), SettingsActivity.class);
+        startActivity(intent);
+        forceRefresh = true;
+      }
+    });
+  }
+
+  private void init() {
     settings = new SettingsHelper(/* context= */ getContext());
 
     boolean use_mediastore = settings.useMediaStore();
@@ -90,6 +110,23 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
       List<MediaStoreData> mediaStoreData = DirectoryHelper.getImagesInDirectory(directory, recurse);
       onLoadComplete(/* loader= */ null, mediaStoreData);
     }
+
+    recyclerView.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener() {
+      @Override
+      public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+        // forward event
+        gestures.onTouchEvent(e);
+
+        // consume event
+        return true;
+      }
+
+      @Override
+      public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+        // forward event
+        gestures.onTouchEvent(e);
+      }
+    });
   }
 
   @Override
@@ -136,14 +173,6 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
       }
     };
 
-    recyclerView.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener() {
-      @Override
-      public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
-        // consume touch event
-        return true;
-      }
-    });
-
     handler.post(slideshow);
     slideshow_running = true;
   }
@@ -155,6 +184,11 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     if ((handler != null) && !slideshow_running) {
       handler.postDelayed(slideshow, duration);
       slideshow_running = true;
+    }
+
+    if (forceRefresh) {
+      forceRefresh = false;
+      getActivity().recreate();
     }
   }
 
