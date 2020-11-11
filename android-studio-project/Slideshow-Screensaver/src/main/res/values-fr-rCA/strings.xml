@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Curseur de diaporama</string>
+  <string name="image_content_description">Photo</string>
+  <string name="pref_value_enabled">Activé</string>
+  <string name="pref_value_disabled">Désactivé</string>
+  <string name="pref_settings_title">Paramètres de diaporama</string>
+  <string name="pref_imageduration_title">Durée (ms).</string>
+  <string name="pref_imageduration_dlg">Entrez la durée (ms) pour afficher des images:</string>
+  <string name="pref_usemediastore_title">Utiliser MediaStore fournisseur.</string>
+  <string name="pref_usemediastore_dlg">Afficher les images du Android index des unités de stockage connectées:</string>
+  <string name="pref_directoryselector_title">Chemin du répertoire.</string>
+  <string name="pref_directoryselector_dlg">Répertoire:</string>
+  <string name="pref_recursedirectory_title">Récurse dans les sous-répertoires.</string>
+  <string name="pref_recursedirectory_dlg">Inclure des images de tous les sous-répertoires:</string>
+  <string name="toast_storage_permission_denied">Une autorisation de stockage est requise</string>
+</resources>

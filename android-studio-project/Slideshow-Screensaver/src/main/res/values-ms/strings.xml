@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Penyelamat Skrin Slideshow</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Dibenarkan</string>
+  <string name="pref_value_disabled">Dinyahaktifkan</string>
+  <string name="pref_settings_title">Tetapan Nyahpapar Semula</string>
+  <string name="pref_imageduration_title">Tempoh Masa (ms).</string>
+  <string name="pref_imageduration_dlg">Masukkan tempoh masa (ms) untuk paparkan imej:</string>
+  <string name="pref_usemediastore_title">Guna MediaStore penyedia.</string>
+  <string name="pref_usemediastore_dlg">Papar imej dari Android indeks bagi peranti storan dilampir:</string>
+  <string name="pref_directoryselector_title">Laluan direktori.</string>
+  <string name="pref_directoryselector_dlg">Direktori:</string>
+  <string name="pref_recursedirectory_title">Kutukan semula ke dalam subdirektori.</string>
+  <string name="pref_recursedirectory_dlg">Sertakan imej dari semua subdirektori:</string>
+  <string name="toast_storage_permission_denied">Keizinan storan diperlukan</string>
+</resources>

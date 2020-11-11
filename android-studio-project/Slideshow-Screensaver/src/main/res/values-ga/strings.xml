@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Taispeántas Sleamhnán Scáileáin</string>
+  <string name="image_content_description">Grianghraf</string>
+  <string name="pref_value_enabled">Cumasaithe</string>
+  <string name="pref_value_disabled">Fotha</string>
+  <string name="pref_settings_title">Socruithe Sleamhnán</string>
+  <string name="pref_imageduration_title">Fad Ama (ms).</string>
+  <string name="pref_imageduration_dlg">Iontráil lá ama (ms) chun íomhánna a thaispeáint:</string>
+  <string name="pref_usemediastore_title">Úsáid: MediaStore soláthraí.</string>
+  <string name="pref_usemediastore_dlg">Taispeáin íomhánna ó na Android innéacs de ghléasanna stórála ceangailte:</string>
+  <string name="pref_directoryselector_title">Conair chomhadlann.</string>
+  <string name="pref_directoryselector_dlg">Comhadlann:</string>
+  <string name="pref_recursedirectory_title">Athchúrsáil isteach i gcomhadlanna.</string>
+  <string name="pref_recursedirectory_dlg">Cuir íomhánna ó gach fochomhadlann:</string>
+  <string name="toast_storage_permission_denied">Tá cead stórála ag teastáil</string>
+</resources>

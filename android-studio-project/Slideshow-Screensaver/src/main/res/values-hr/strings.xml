@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">SlidePrikaži Screensaver</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Omogućeni</string>
+  <string name="pref_value_disabled">Onemogućen</string>
+  <string name="pref_settings_title">Postavke slideshow-a</string>
+  <string name="pref_imageduration_title">Trajanje Vremena (ms).</string>
+  <string name="pref_imageduration_dlg">Unesite trajanje vremena (ms) za prikaz slika:</string>
+  <string name="pref_usemediastore_title">Koristi MediaStore dobavljač.</string>
+  <string name="pref_usemediastore_dlg">Pokaži slike iz Android indeks pripojenih memorijenih uređaja:</string>
+  <string name="pref_directoryselector_title">Staza direktorija.</string>
+  <string name="pref_directoryselector_dlg">Direktorij:</string>
+  <string name="pref_recursedirectory_title">Rekurse u poddirektorije.</string>
+  <string name="pref_recursedirectory_dlg">Uključi slike iz svih poddirektorija:</string>
+  <string name="toast_storage_permission_denied">Dozvola za pohranu je obaveza</string>
+</resources>

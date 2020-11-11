@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Skärmsläckare Bildspel</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Aktiverad</string>
+  <string name="pref_value_disabled">Inaktiverad</string>
+  <string name="pref_settings_title">Bildspelsinställningar</string>
+  <string name="pref_imageduration_title">Tidslängd (ms).</string>
+  <string name="pref_imageduration_dlg">Ange tidslängd (ms) för att visa bilder:</string>
+  <string name="pref_usemediastore_title">Användning MediaStore leverantör.</string>
+  <string name="pref_usemediastore_dlg">Visa bilder från Android index för anslutna lagringsenheter:</string>
+  <string name="pref_directoryselector_title">Katalogsökväg.</string>
+  <string name="pref_directoryselector_dlg">Katalognamn:</string>
+  <string name="pref_recursedirectory_title">Rekurser i underkataloger.</string>
+  <string name="pref_recursedirectory_dlg">Inkludera bilder från alla underkataloger:</string>
+  <string name="toast_storage_permission_denied">Lagringsbehörighet krävs</string>
+</resources>

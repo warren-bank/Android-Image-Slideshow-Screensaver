@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">ఫొటో</string>
+  <string name="pref_value_enabled">చేతనంచేయబడినది</string>
+  <string name="pref_value_disabled">అచేతనంName</string>
+  <string name="pref_settings_title">\@ info: Slideshow সেComment</string>
+  <string name="pref_imageduration_title">సమయ దురణం (ms).</string>
+  <string name="pref_imageduration_dlg">కాలవ్యవధి ప్రవేశపెట్టుము (ms) చిత్రాలు ప్రదర్శించుటకు:</string>
+  <string name="pref_usemediastore_title">వుపయోగించుము MediaStore ప్రొవైడర్.</string>
+  <string name="pref_usemediastore_dlg">చిత్రాలు చూపుము Android అనుసంధానించబడిన నిల్వల పరికరం:</string>
+  <string name="pref_directoryselector_title">డైరెక్టరీ దారి.</string>
+  <string name="pref_directoryselector_dlg">డైరెక్టరీ:</string>
+  <string name="pref_recursedirectory_title">(u) సబ్డైరెక్టరీలలో రికార్డుచేయుము.</string>
+  <string name="pref_recursedirectory_dlg">అన్ని సబ్డైరెక్టరీల నుండి చిత్రాలను చేర్చుము:</string>
+  <string name="toast_storage_permission_denied">સંગ્રહ అనుమతి అవసరమవుతుంది</string>
+</resources>

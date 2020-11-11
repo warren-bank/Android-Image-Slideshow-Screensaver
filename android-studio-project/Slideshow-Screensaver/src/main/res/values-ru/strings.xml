@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Слайд-шоу</string>
+  <string name="image_content_description">Фото</string>
+  <string name="pref_value_enabled">Включено</string>
+  <string name="pref_value_disabled">Выключено</string>
+  <string name="pref_settings_title">Параметры слайд-шоу</string>
+  <string name="pref_imageduration_title">Продолжительность (ms).</string>
+  <string name="pref_imageduration_dlg">Введите время (ms) для отображения изображений:</string>
+  <string name="pref_usemediastore_title">Использование MediaStore провайдер.</string>
+  <string name="pref_usemediastore_dlg">Показать изображения из Android индекс подключенных устройств хранения:</string>
+  <string name="pref_directoryselector_title">Путь к каталогу.</string>
+  <string name="pref_directoryselector_dlg">Каталог:</string>
+  <string name="pref_recursedirectory_title">Рекурсировать в подкаталоги.</string>
+  <string name="pref_recursedirectory_dlg">Включить изображения из всех подкаталогов:</string>
+  <string name="toast_storage_permission_denied">Требуется разрешение на хранение</string>
+</resources>

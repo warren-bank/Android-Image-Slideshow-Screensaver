@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Diaktifkan</string>
+  <string name="pref_value_disabled">Dinonaktifkan</string>
+  <string name="pref_settings_title">Pengaturan slideshow</string>
+  <string name="pref_imageduration_title">Durasi Waktu (ms).</string>
+  <string name="pref_imageduration_dlg">Masukkan durasi waktu (ms) untuk menampilkan gambar:</string>
+  <string name="pref_usemediastore_title">Gunakan MediaStore Penyedia.</string>
+  <string name="pref_usemediastore_dlg">Tampilkan gambar dari Android indeks dari perangkat penyimpanan terlampai:</string>
+  <string name="pref_directoryselector_title">Path direktori.</string>
+  <string name="pref_directoryselector_dlg">Direktori:</string>
+  <string name="pref_recursedirectory_title">Rekursif ke dalam subdirektori.</string>
+  <string name="pref_recursedirectory_dlg">Sertakan gambar dari semua subdirektori:</string>
+  <string name="toast_storage_permission_denied">Izin penyimpanan diperlukan</string>
+</resources>

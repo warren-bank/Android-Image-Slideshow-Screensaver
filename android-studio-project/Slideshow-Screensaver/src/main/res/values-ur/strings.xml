@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">فوٹو</string>
+  <string name="pref_value_enabled">حوصلہ افزائی</string>
+  <string name="pref_value_disabled">معذور</string>
+  <string name="pref_settings_title">Slideshow Settings</string>
+  <string name="pref_imageduration_title">وقت دورانیہ (ms).</string>
+  <string name="pref_imageduration_dlg">وقت کی مدت درج (ms) تصاویر نمائش کے لیے:</string>
+  <string name="pref_usemediastore_title">استعمال MediaStore فراہم کنندہ.</string>
+  <string name="pref_usemediastore_dlg">سے تصاویر دکھائیں Android حامل سٹوریج ڈیوائس کا انڈیکس:</string>
+  <string name="pref_directoryselector_title">ڈائرکٹری کا راستہ.</string>
+  <string name="pref_directoryselector_dlg">ڈائرکٹری:</string>
+  <string name="pref_recursedirectory_title">Subڈائریکٹریوں میں بھرتی.</string>
+  <string name="pref_recursedirectory_dlg">تمام subڈائریکٹریوں کی جانب سے تصاویر شامل:</string>
+  <string name="toast_storage_permission_denied">سٹوریج کی اجازت درکار ہے</string>
+</resources>

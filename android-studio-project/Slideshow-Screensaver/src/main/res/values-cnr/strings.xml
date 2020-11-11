@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Pokaži mi sliku</string>
+  <string name="image_content_description">Jedna fotografija.</string>
+  <string name="pref_value_enabled">Omogućeno.</string>
+  <string name="pref_value_disabled">Onemogućeno.</string>
+  <string name="pref_settings_title">Postavke dijaprojekcije</string>
+  <string name="pref_imageduration_title">Jedno vrijeme. (ms).</string>
+  <string name="pref_imageduration_dlg">Unesi vrijeme trajanja. (ms) za prikaz slika:</string>
+  <string name="pref_usemediastore_title">Jedna koristi. MediaStore G..</string>
+  <string name="pref_usemediastore_dlg">Pokaži slike iz Android Indeks spojenih uređaja za pohranu podataka:</string>
+  <string name="pref_directoryselector_title">Put imenika.</string>
+  <string name="pref_directoryselector_dlg">Jedan direktorij.:</string>
+  <string name="pref_recursedirectory_title">Vrati se u poddirektorije..</string>
+  <string name="pref_recursedirectory_dlg">Uključi slike sa svih poddirektorija.:</string>
+  <string name="toast_storage_permission_denied">Potrebna je jedna dozvola za odlaganje.</string>
+</resources>

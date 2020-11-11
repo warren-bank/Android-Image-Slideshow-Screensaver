@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow képernyővédő</string>
+  <string name="image_content_description">Fotó</string>
+  <string name="pref_value_enabled">Engedélyezett</string>
+  <string name="pref_value_disabled">Letiltva</string>
+  <string name="pref_settings_title">Slideshow beállítások</string>
+  <string name="pref_imageduration_title">Időtartam időtartama (ms).</string>
+  <string name="pref_imageduration_dlg">Adja meg az időtartamot (ms) Képek megjelenítése:</string>
+  <string name="pref_usemediastore_title">Használat MediaStore Szolgáltató.</string>
+  <string name="pref_usemediastore_dlg">Képek megjelenítése a Android Csatolt tárolóeszközök indexe:</string>
+  <string name="pref_directoryselector_title">Könyvtár útvonala.</string>
+  <string name="pref_directoryselector_dlg">Könyvtár:</string>
+  <string name="pref_recursedirectory_title">Recurse alkönyvtárakba.</string>
+  <string name="pref_recursedirectory_dlg">Képek tartalmazása az alkönyvtárakból:</string>
+  <string name="toast_storage_permission_denied">Tárolási engedély szükséges</string>
+</resources>

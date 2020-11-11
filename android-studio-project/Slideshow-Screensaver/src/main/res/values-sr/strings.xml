@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Слајдшоу чувар екрана</string>
+  <string name="image_content_description">Фотографија</string>
+  <string name="pref_value_enabled">Омогућено</string>
+  <string name="pref_value_disabled">Онемогућено</string>
+  <string name="pref_settings_title">Поставке слајдеуа</string>
+  <string name="pref_imageduration_title">Трајање времена (ms).</string>
+  <string name="pref_imageduration_dlg">Унесите време трајања (ms) да бисте приказали слике:</string>
+  <string name="pref_usemediastore_title">Користи MediaStore провајдер.</string>
+  <string name="pref_usemediastore_dlg">Прикажи слике из Android индекс приложена уређаја за складиштење:</string>
+  <string name="pref_directoryselector_title">Путања директоријума.</string>
+  <string name="pref_directoryselector_dlg">Директоријум:</string>
+  <string name="pref_recursedirectory_title">Рекурзија у поддиректоријуме.</string>
+  <string name="pref_recursedirectory_dlg">Обухвати слике из свих поддиректоријума:</string>
+  <string name="toast_storage_permission_denied">Потребна је дозвола за складиштење</string>
+</resources>

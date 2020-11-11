@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Zaslonski prikaz diaprojekta2</string>
+  <string name="image_content_description">Fotografija</string>
+  <string name="pref_value_enabled">Omogočeno</string>
+  <string name="pref_value_disabled">Onemogoče</string>
+  <string name="pref_settings_title">Nastavitve diaprojekcijske nastavitve</string>
+  <string name="pref_imageduration_title">Trajanje Časa (ms).</string>
+  <string name="pref_imageduration_dlg">Vnesite časovno trajanje (ms) za prikaz slik:</string>
+  <string name="pref_usemediastore_title">Uporabi MediaStore ponudnik.</string>
+  <string name="pref_usemediastore_dlg">Prikaži slike iz Android indeks priključne pomnilniške naprave:</string>
+  <string name="pref_directoryselector_title">Pot imenika.</string>
+  <string name="pref_directoryselector_dlg">Imenik:</string>
+  <string name="pref_recursedirectory_title">Ponovno prekletstvo v podimenike.</string>
+  <string name="pref_recursedirectory_dlg">Vključi slike iz vseh podimenikov:</string>
+  <string name="toast_storage_permission_denied">Zahtevano je dovoljenje za shranjevanje</string>
+</resources>

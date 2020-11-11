@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">Φωτογραφία:</string>
+  <string name="pref_value_enabled">\' Ενεργή</string>
+  <string name="pref_value_disabled">\' Ατομα</string>
+  <string name="pref_settings_title">Ρυθμίσεις παρουσίασης διαφανών</string>
+  <string name="pref_imageduration_title">Χρόνος λήξης: (ms).</string>
+  <string name="pref_imageduration_dlg">Καταχώρηση χρονικής διάρκειας (ms) για προβολή εικόνων.:</string>
+  <string name="pref_usemediastore_title">Χρήση: MediaStore -παρόχου.</string>
+  <string name="pref_usemediastore_dlg">Εμφάνιση εικόνων από το Android δείκτης των συνδεδεμένων συσκευών αποθήκευσης,:</string>
+  <string name="pref_directoryselector_title">Διαδρομή καταλόγου.</string>
+  <string name="pref_directoryselector_dlg">\' Κατάλογος:</string>
+  <string name="pref_recursedirectory_title">Επανάληψη σε subdirectories.</string>
+  <string name="pref_recursedirectory_dlg">Συμπερίληψη εικόνων από όλους τους υποκαταλόγους:</string>
+  <string name="toast_storage_permission_denied">Απαιτείται άδεια αποθήκευσης.</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Показ слайдів зберігача екрана</string>
+  <string name="image_content_description">Фото</string>
+  <string name="pref_value_enabled">Увімкнено</string>
+  <string name="pref_value_disabled">Вимкнений</string>
+  <string name="pref_settings_title">Параметри показу слайдів</string>
+  <string name="pref_imageduration_title">Тривалість часу (ms).</string>
+  <string name="pref_imageduration_dlg">Введіть тривалість часу (ms) Для показу зображень:</string>
+  <string name="pref_usemediastore_title">Використовувати MediaStore провайдер.</string>
+  <string name="pref_usemediastore_dlg">Показати зображення з Android індекс приєднаних пристроїв зберігання даних:</string>
+  <string name="pref_directoryselector_title">Шлях до каталогу.</string>
+  <string name="pref_directoryselector_dlg">Каталог:</string>
+  <string name="pref_recursedirectory_title">Рекурсивно в підкаталоги.</string>
+  <string name="pref_recursedirectory_dlg">Включати зображення з усіх підкаталогів:</string>
+  <string name="toast_storage_permission_denied">Потрібен дозвіл на зберігання</string>
+</resources>

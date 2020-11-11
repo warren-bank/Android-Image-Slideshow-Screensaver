@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Aktiveret</string>
+  <string name="pref_value_disabled">Deaktiveret</string>
+  <string name="pref_settings_title">Indstillinger for glideshow</string>
+  <string name="pref_imageduration_title">Varighed af klokkeslæt (ms).</string>
+  <string name="pref_imageduration_dlg">Angiv tidsvarighed (ms) for at vise billeder:</string>
+  <string name="pref_usemediastore_title">Brug MediaStore udbyder.</string>
+  <string name="pref_usemediastore_dlg">Vis billeder fra Android indeks for tilsluttede lagerenheder:</string>
+  <string name="pref_directoryselector_title">Katalogsti.</string>
+  <string name="pref_directoryselector_dlg">Bibliotek:</string>
+  <string name="pref_recursedirectory_title">Rekurse i underbiblioteker.</string>
+  <string name="pref_recursedirectory_dlg">Inkludér billeder fra alle underbiblioteker:</string>
+  <string name="toast_storage_permission_denied">Lagertilladelse er påkrævet</string>
+</resources>

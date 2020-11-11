@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">புகைப்படம்</string>
+  <string name="pref_value_enabled">செயல்படுத்தப்பட்டது</string>
+  <string name="pref_value_disabled">முடக்கப்பட்டதுName</string>
+  <string name="pref_settings_title">Slideshow அமைப்புகள்</string>
+  <string name="pref_imageduration_title">நேர கால அளவு (ms).</string>
+  <string name="pref_imageduration_dlg">நேர கால அளவை உள்ளிடு (ms) பிம்பங்களை காட்ட:</string>
+  <string name="pref_usemediastore_title">பயன்படுத்து MediaStore வழங்குபவர்.</string>
+  <string name="pref_usemediastore_dlg">படங்களை காட்டு Android இணைக்கப்பட்ட சேமிப்பு சாதனங்களின் அட்டவணை:</string>
+  <string name="pref_directoryselector_title">அடைவு பாதை.</string>
+  <string name="pref_directoryselector_dlg">அடைவு:</string>
+  <string name="pref_recursedirectory_title">துணை அடைவுகளுக்குச் செருகு.</string>
+  <string name="pref_recursedirectory_dlg">எல்லா துணை அடைவிலிருந்து பிம்பங்களை சேர்:</string>
+  <string name="toast_storage_permission_denied">சேமிப்பு அனுமதி தேவைப்படுகிறது</string>
+</resources>

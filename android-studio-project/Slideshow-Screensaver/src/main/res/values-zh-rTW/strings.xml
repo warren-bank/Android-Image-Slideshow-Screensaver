@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">投影片放映螢幕保護程式</string>
+  <string name="image_content_description">□</string>
+  <string name="pref_value_enabled">已啟用</string>
+  <string name="pref_value_disabled">已停用</string>
+  <string name="pref_settings_title">投影片放映設定</string>
+  <string name="pref_imageduration_title">時間持續時間 (ms).</string>
+  <string name="pref_imageduration_dlg">輸入持續時間 (ms) 以顯示影像:</string>
+  <string name="pref_usemediastore_title">用 MediaStore 提供者.</string>
+  <string name="pref_usemediastore_dlg">從顯示影像 Android 已連接儲存裝置的索引:</string>
+  <string name="pref_directoryselector_title">目錄路徑.</string>
+  <string name="pref_directoryselector_dlg">目錄:</string>
+  <string name="pref_recursedirectory_title">遞迴至子目錄.</string>
+  <string name="pref_recursedirectory_dlg">包括來自所有子目錄的影像:</string>
+  <string name="toast_storage_permission_denied">需要儲存體許可權</string>
+</resources>

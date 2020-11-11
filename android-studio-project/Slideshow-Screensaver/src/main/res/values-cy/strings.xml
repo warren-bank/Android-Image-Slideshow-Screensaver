@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Dangos arbedwr sgrin</string>
+  <string name="image_content_description">Ffoto</string>
+  <string name="pref_value_enabled">Galluogwyd</string>
+  <string name="pref_value_disabled">Analluogwyd</string>
+  <string name="pref_settings_title">Gosodiadau Tryloywder</string>
+  <string name="pref_imageduration_title">Hyd Amser (ms).</string>
+  <string name="pref_imageduration_dlg">Rhowch amser amser (ms) i ddangos delweddau:</string>
+  <string name="pref_usemediastore_title">Defnyddio MediaStore darparwr.</string>
+  <string name="pref_usemediastore_dlg">Dangos delweddau o\'r Android mynegai dyfeisiau storio cysylltiedig:</string>
+  <string name="pref_directoryselector_title">Llwybr cyfeiriadur.</string>
+  <string name="pref_directoryselector_dlg">Cyfeiriadur:</string>
+  <string name="pref_recursedirectory_title">Mynd yn ôl i isgyfeiriaduron.</string>
+  <string name="pref_recursedirectory_dlg">Cynnwys delweddau o bob is-gyfeiriadur:</string>
+  <string name="toast_storage_permission_denied">Mae angen caniatâd storio</string>
+</resources>

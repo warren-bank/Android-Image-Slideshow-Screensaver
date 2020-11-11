@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Skaidriu ekrano ekrano užsklanda</string>
+  <string name="image_content_description">Nuotrauka</string>
+  <string name="pref_value_enabled">Įgalinti</string>
+  <string name="pref_value_disabled">Neįgalieji</string>
+  <string name="pref_settings_title">Slapto nustatymų nustatymai</string>
+  <string name="pref_imageduration_title">Laiko trukmė (ms).</string>
+  <string name="pref_imageduration_dlg">Įveskite laiko trukmę (ms) rodyti paveikslėlius:</string>
+  <string name="pref_usemediastore_title">Naudoti MediaStore paslaugų teikėjas.</string>
+  <string name="pref_usemediastore_dlg">Rodyti vaizdus iš Android prijungtų saugojimo įtaisų rodyklės:</string>
+  <string name="pref_directoryselector_title">Aplanko kelias.</string>
+  <string name="pref_directoryselector_dlg">Aplankas:</string>
+  <string name="pref_recursedirectory_title">Rekurse į paaplankus.</string>
+  <string name="pref_recursedirectory_dlg">Įtraukti vaizdus iš visų paaplankų:</string>
+  <string name="toast_storage_permission_denied">Leidimo saugoti nereikia</string>
+</resources>

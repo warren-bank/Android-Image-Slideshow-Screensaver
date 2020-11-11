@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Trình chiếu</string>
+  <string name="image_content_description">Ảnh chụp</string>
+  <string name="pref_value_enabled">Ðã bật</string>
+  <string name="pref_value_disabled">Ðã tắt</string>
+  <string name="pref_settings_title">Thiết lập trình chiếu</string>
+  <string name="pref_imageduration_title">Thời gian thời gian (ms).</string>
+  <string name="pref_imageduration_dlg">Nhập thời gian thời gian (ms) để hiển thị ảnh:</string>
+  <string name="pref_usemediastore_title">Dùng MediaStore nhà cung cấp.</string>
+  <string name="pref_usemediastore_dlg">Hiện hình ảnh từ Android chỉ mục bộ lưu trư ̃ đính:</string>
+  <string name="pref_directoryselector_title">đường dẫn thư mục.</string>
+  <string name="pref_directoryselector_dlg">Thư mục:</string>
+  <string name="pref_recursedirectory_title">Đệ quy vào các thư mục con.</string>
+  <string name="pref_recursedirectory_dlg">Bao gồm ảnh từ mọi thư mục con:</string>
+  <string name="toast_storage_permission_denied">Yêu cầu bộ lưu trư ̃</string>
+</resources>

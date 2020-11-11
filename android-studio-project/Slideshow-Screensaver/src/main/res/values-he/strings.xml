@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">מצגת שקופיות של מצגת</string>
+  <string name="image_content_description">תמונה</string>
+  <string name="pref_value_enabled">מופעל</string>
+  <string name="pref_value_disabled">מושבת</string>
+  <string name="pref_settings_title">הגדרות מצגת שקופיות</string>
+  <string name="pref_imageduration_title">משך זמן (ms).</string>
+  <string name="pref_imageduration_dlg">משך הזמן של Enter (ms) להצגת תמונות:</string>
+  <string name="pref_usemediastore_title">שימוש MediaStore ספק.</string>
+  <string name="pref_usemediastore_dlg">הצגת תמונות מתוך ה - Android אינדקס של התקני אחסון מצורפים:</string>
+  <string name="pref_directoryselector_title">נתיב מדריך.</string>
+  <string name="pref_directoryselector_dlg">מדריך:</string>
+  <string name="pref_recursedirectory_title">חזרה לתת-מדריכים.</string>
+  <string name="pref_recursedirectory_dlg">הכללת תמונות מכל התת-מדריכים:</string>
+  <string name="toast_storage_permission_denied">דרושה הרשאת אחסון</string>
+</resources>

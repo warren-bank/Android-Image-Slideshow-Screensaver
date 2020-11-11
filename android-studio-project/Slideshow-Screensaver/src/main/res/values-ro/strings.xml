@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Screensaver de prezentare</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Activat</string>
+  <string name="pref_value_disabled">Dezactivat</string>
+  <string name="pref_settings_title">Setări prezentare</string>
+  <string name="pref_imageduration_title">Durată timp (ms).</string>
+  <string name="pref_imageduration_dlg">Introduceţi durata de timp (ms) pentru a afişa imagini:</string>
+  <string name="pref_usemediastore_title">Utilizare MediaStore furnizor.</string>
+  <string name="pref_usemediastore_dlg">Afişare imagini de la Android index al dispozitivelor de stocare ataşate:</string>
+  <string name="pref_directoryselector_title">Cale director.</string>
+  <string name="pref_directoryselector_dlg">Director:</string>
+  <string name="pref_recursedirectory_title">Recurse în subdirectoare.</string>
+  <string name="pref_recursedirectory_dlg">Includere imagini din toate subdirectoarele:</string>
+  <string name="toast_storage_permission_denied">Permisiunea de stocare este necesară</string>
+</resources>

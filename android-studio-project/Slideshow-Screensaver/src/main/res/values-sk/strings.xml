@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Šetrič Screensaver</string>
+  <string name="image_content_description">Fotografia</string>
+  <string name="pref_value_enabled">Povolené</string>
+  <string name="pref_value_disabled">Zakázané</string>
+  <string name="pref_settings_title">Nastavenia prehliadky slideshow</string>
+  <string name="pref_imageduration_title">Trvanie času (ms).</string>
+  <string name="pref_imageduration_dlg">Zadať čas trvania (ms) na zobrazenie obrázkov:</string>
+  <string name="pref_usemediastore_title">Použitie MediaStore poskytovateľ.</string>
+  <string name="pref_usemediastore_dlg">Zobraziť obrázky z Android index pripojených úložných zariadení:</string>
+  <string name="pref_directoryselector_title">Cesta k adresáru.</string>
+  <string name="pref_directoryselector_dlg">Adresár:</string>
+  <string name="pref_recursedirectory_title">Rekurovať do podadresárov.</string>
+  <string name="pref_recursedirectory_dlg">Zahrnúť obrázky zo všetkých podadresárov:</string>
+  <string name="toast_storage_permission_denied">Vyžaduje sa oprávnenie na úložný priestor</string>
+</resources>

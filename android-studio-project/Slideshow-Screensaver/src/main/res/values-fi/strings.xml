@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow-näytönsäästäjä</string>
+  <string name="image_content_description">Kuva</string>
+  <string name="pref_value_enabled">Käytössä</string>
+  <string name="pref_value_disabled">Vammainen</string>
+  <string name="pref_settings_title">Slideshow-asetukset</string>
+  <string name="pref_imageduration_title">Aikaväli (ms).</string>
+  <string name="pref_imageduration_dlg">Anna ajan kesto (ms) Näyttää kuvia:</string>
+  <string name="pref_usemediastore_title">Käytä MediaStore Toimittaja.</string>
+  <string name="pref_usemediastore_dlg">Näytä kuvia Android Liitettyjen tallennuslaitteiden hakemisto:</string>
+  <string name="pref_directoryselector_title">Hakemistopolku.</string>
+  <string name="pref_directoryselector_dlg">Hakemisto:</string>
+  <string name="pref_recursedirectory_title">Recurse-alihakemistot.</string>
+  <string name="pref_recursedirectory_dlg">Sisällytä kuvat kaikista alihakemistoista:</string>
+  <string name="toast_storage_permission_denied">Varastointilupa on pakollinen</string>
+</resources>

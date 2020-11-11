@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">幻灯片屏幕保护程序</string>
+  <string name="image_content_description">照片</string>
+  <string name="pref_value_enabled">已启用</string>
+  <string name="pref_value_disabled">已禁用</string>
+  <string name="pref_settings_title">幻灯片设置</string>
+  <string name="pref_imageduration_title">持续时间 (ms).</string>
+  <string name="pref_imageduration_dlg">输入持续时间 (ms) 显示图像:</string>
+  <string name="pref_usemediastore_title">使用 MediaStore 提供者.</string>
+  <string name="pref_usemediastore_dlg">显示来自 Android 附加存储设备的索引:</string>
+  <string name="pref_directoryselector_title">目录路径.</string>
+  <string name="pref_directoryselector_dlg">目录:</string>
+  <string name="pref_recursedirectory_title">递归至子目录.</string>
+  <string name="pref_recursedirectory_dlg">包含来自所有子目录的图像:</string>
+  <string name="toast_storage_permission_denied">存储许可权是必需的</string>
+</resources>

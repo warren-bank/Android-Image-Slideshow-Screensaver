@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">SliseslieScreivaver</string>
+  <string name="image_content_description">الصورة</string>
+  <string name="pref_value_enabled">متاح</string>
+  <string name="pref_value_disabled">غير متاح</string>
+  <string name="pref_settings_title">محددات الشرائح</string>
+  <string name="pref_imageduration_title">الفترة الزمنية (ms).</string>
+  <string name="pref_imageduration_dlg">أدخل الفترة الزمنية (ms) لعرض صور:</string>
+  <string name="pref_usemediastore_title">الاستخدام MediaStore جهة اتاحة.</string>
+  <string name="pref_usemediastore_dlg">عرض صور من Android فهرس أجهزة التخزين المرفقة:</string>
+  <string name="pref_directoryselector_title">مسار الدليل.</string>
+  <string name="pref_directoryselector_dlg">الدليل:</string>
+  <string name="pref_recursedirectory_title">Recurse داخل الأدلة الفرعية.</string>
+  <string name="pref_recursedirectory_dlg">تضمين صور من كل الأدلة الفرعية:</string>
+  <string name="toast_storage_permission_denied">تصريح التخزين مطلوب</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">સ્લાઈડ સ્ક્રીનસેવર</string>
+  <string name="image_content_description">ફોટો</string>
+  <string name="pref_value_enabled">સક્રિય થયેલ છે</string>
+  <string name="pref_value_disabled">નિષ્ક્રિય થયેલ</string>
+  <string name="pref_settings_title">Slideshow સુયોજનો</string>
+  <string name="pref_imageduration_title">સમય ગાળણ (ms).</string>
+  <string name="pref_imageduration_dlg">સમયગાળો દાખલ કરો (ms) ચિત્રો દર્શાવવા માટે:</string>
+  <string name="pref_usemediastore_title">વાપરો MediaStore પૂરો પાડનાર.</string>
+  <string name="pref_usemediastore_dlg">ચિત્રો બતાવો Android જોડાયેલ સંગ્રહ ઉપકરણોની અનુક્રમણિકા:</string>
+  <string name="pref_directoryselector_title">ડિરેક્ટરી પાથ.</string>
+  <string name="pref_directoryselector_dlg">ડિરેક્ટરી:</string>
+  <string name="pref_recursedirectory_title">ઉપડિરેક્ટરીઓમાં પાછા મેળવો.</string>
+  <string name="pref_recursedirectory_dlg">બધી ઉપડિરેક્ટરીઓમાંથી ચિત્રો સમાવો:</string>
+  <string name="toast_storage_permission_denied">સંગ્રહ પરવાનગી જરૂરી છે</string>
+</resources>

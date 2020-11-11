@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Wygaszacz ekranu Screensaver</string>
+  <string name="image_content_description">Zdjęcie</string>
+  <string name="pref_value_enabled">Włączone</string>
+  <string name="pref_value_disabled">Wyłączone</string>
+  <string name="pref_settings_title">Ustawienia pokazu slajdów</string>
+  <string name="pref_imageduration_title">Czas trwania (ms).</string>
+  <string name="pref_imageduration_dlg">Wprowadź przedział czasu (ms) w celu wyświetlania obrazów:</string>
+  <string name="pref_usemediastore_title">Użyj MediaStore Dostawca.</string>
+  <string name="pref_usemediastore_dlg">Pokaż obrazy z Android indeks podłączonych urządzeń pamięci masowej:</string>
+  <string name="pref_directoryselector_title">Ścieżka do katalogu.</string>
+  <string name="pref_directoryselector_dlg">Katalog:</string>
+  <string name="pref_recursedirectory_title">Rekurencja do podkatalogów.</string>
+  <string name="pref_recursedirectory_dlg">Uwzględnij obrazy ze wszystkich podkatalogów:</string>
+  <string name="toast_storage_permission_denied">Uprawnienie do pamięci masowej jest wymagane</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slayt Gösterisi Ekran Koruyucu</string>
+  <string name="image_content_description">Fotoğraf</string>
+  <string name="pref_value_enabled">Etkin</string>
+  <string name="pref_value_disabled">Devre dışı</string>
+  <string name="pref_settings_title">Slayt Gösterisi Ayarları</string>
+  <string name="pref_imageduration_title">Zaman Süresi (ms).</string>
+  <string name="pref_imageduration_dlg">Zaman süresini girin (ms) resimleri görüntülemek için:</string>
+  <string name="pref_usemediastore_title">Kullan MediaStore sağlayıcı.</string>
+  <string name="pref_usemediastore_dlg">Görüntüdeki resimleri göster Android bağlı depolama aygıtlarının dizini:</string>
+  <string name="pref_directoryselector_title">Dizin yolu.</string>
+  <string name="pref_directoryselector_dlg">Dizin:</string>
+  <string name="pref_recursedirectory_title">Alt dizinlere özyinelemeli.</string>
+  <string name="pref_recursedirectory_dlg">Tüm alt dizinlerdeki resimleri içer:</string>
+  <string name="toast_storage_permission_denied">Saklama izni gerekiyor</string>
+</resources>

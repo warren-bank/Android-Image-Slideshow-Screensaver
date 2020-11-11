@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slaidiseansi ekraanisäästja</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Lubatud</string>
+  <string name="pref_value_disabled">Keelatud</string>
+  <string name="pref_settings_title">Slaidiseansi seadistused</string>
+  <string name="pref_imageduration_title">Ajaline kestus (ms).</string>
+  <string name="pref_imageduration_dlg">Sisesta ajaline kestus (ms) kuvada pilte:</string>
+  <string name="pref_usemediastore_title">Kasutamine MediaStore pakkuja.</string>
+  <string name="pref_usemediastore_dlg">Piltide näitamine Android Lisatud salvestusseadmete indeks:</string>
+  <string name="pref_directoryselector_title">Kataloogitee.</string>
+  <string name="pref_directoryselector_dlg">Kataloog:</string>
+  <string name="pref_recursedirectory_title">Recurse sisse alamkataloogid.</string>
+  <string name="pref_recursedirectory_dlg">Piltide kaasamine kõigist alamkataloogidest:</string>
+  <string name="toast_storage_permission_denied">Salvestamise luba on nõutav</string>
+</resources>

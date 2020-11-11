@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">පිංතූරය</string>
+  <string name="pref_value_enabled">සක්රීය කරන්න</string>
+  <string name="pref_value_disabled">අක්රීය</string>
+  <string name="pref_settings_title">Slideshow සැකසුම්</string>
+  <string name="pref_imageduration_title">වේලාව දුරුකිරීම (ms).</string>
+  <string name="pref_imageduration_dlg">කාල වේලාව ඇතුළත් කරන්න (ms) පිංතූර පෙන්වන්න:</string>
+  <string name="pref_usemediastore_title">භාවිත කරන්න MediaStore සපයන්නා.</string>
+  <string name="pref_usemediastore_dlg">පිංතූර පෙන්වන්න Android සම්බන්ධිත ගබඩා කිරීමේ උපකරණ:</string>
+  <string name="pref_directoryselector_title">බහාලුම මාර්ගය.</string>
+  <string name="pref_directoryselector_dlg">බහලුම:</string>
+  <string name="pref_recursedirectory_title">උප-ඩිරෙක්ටරි බවට පත් කරන්න.</string>
+  <string name="pref_recursedirectory_dlg">සියලු උප-ඩිරෙක්ටරි වලින් පින්තූර ඇතුලත් කරන්න:</string>
+  <string name="toast_storage_permission_denied">ගබඩා අවසරයක් අවශ්ය වේ</string>
+</resources>

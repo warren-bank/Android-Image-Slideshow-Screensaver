@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Slideshow Screensaver</string>
+  <string name="image_content_description">Photo</string>
+  <string name="pref_value_enabled">Activé</string>
+  <string name="pref_value_disabled">Désactivé</string>
+  <string name="pref_settings_title">Paramètres diaporama</string>
+  <string name="pref_imageduration_title">Durée de l\'heure (ms).</string>
+  <string name="pref_imageduration_dlg">Entrer la durée (ms) Pour afficher des images:</string>
+  <string name="pref_usemediastore_title">Utiliser MediaStore Fournisseur.</string>
+  <string name="pref_usemediastore_dlg">Afficher les images à partir de Android Index des unités de stockage connectées:</string>
+  <string name="pref_directoryselector_title">Chemin du répertoire.</string>
+  <string name="pref_directoryselector_dlg">Répertoire:</string>
+  <string name="pref_recursedirectory_title">Récupération dans les sous-répertoires.</string>
+  <string name="pref_recursedirectory_dlg">Inclure les images de tous les sous-répertoires:</string>
+  <string name="toast_storage_permission_denied">L\'autorisation de stockage est requise</string>
+</resources>

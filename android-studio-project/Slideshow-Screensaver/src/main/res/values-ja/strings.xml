@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">スライド・ショー・スクリーン・セーバー</string>
+  <string name="image_content_description">写真</string>
+  <string name="pref_value_enabled">有効</string>
+  <string name="pref_value_disabled">無効</string>
+  <string name="pref_settings_title">スライド・ショー設定</string>
+  <string name="pref_imageduration_title">期間 (ms).</string>
+  <string name="pref_imageduration_dlg">期間の入力 (ms) イメージを表示する:</string>
+  <string name="pref_usemediastore_title">用途 MediaStore プロバイダ.</string>
+  <string name="pref_usemediastore_dlg">以下からイメージを表示 Android 接続されたストレージ装置の索引:</string>
+  <string name="pref_directoryselector_title">ディレクトリー・パス.</string>
+  <string name="pref_directoryselector_dlg">ディレクトリ:</string>
+  <string name="pref_recursedirectory_title">サブディレクトリーへの再帰.</string>
+  <string name="pref_recursedirectory_dlg">すべてのサブディレクトリーのイメージを含める:</string>
+  <string name="toast_storage_permission_denied">ストレージ許可が必要です</string>
+</resources>

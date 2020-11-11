@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Скрийнсейвър на слайдшоу</string>
+  <string name="image_content_description">Снимка:</string>
+  <string name="pref_value_enabled">Включено е</string>
+  <string name="pref_value_disabled">Деактивирано</string>
+  <string name="pref_settings_title">Настройки на слайдшоу</string>
+  <string name="pref_imageduration_title">Продължителност: (ms).</string>
+  <string name="pref_imageduration_dlg">Въведете продължителност на времето (ms) за показване на изображения:</string>
+  <string name="pref_usemediastore_title">Употреба: MediaStore доставчик на услуги.</string>
+  <string name="pref_usemediastore_dlg">Показване на изображения от Android индекс на прикрепени устройства за съхранение:</string>
+  <string name="pref_directoryselector_title">Пътека на директория.</string>
+  <string name="pref_directoryselector_dlg">Директория::</string>
+  <string name="pref_recursedirectory_title">Рекурсиране в поддиректории.</string>
+  <string name="pref_recursedirectory_dlg">Включване на изображения от всички поддиректории:</string>
+  <string name="toast_storage_permission_denied">Изисква се разрешение за съхранение</string>
+</resources>

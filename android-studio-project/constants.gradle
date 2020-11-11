@@ -1,11 +1,12 @@
 project.ext {
-    releaseVersionCode = Integer.parseInt("002000217", 10)
-    releaseVersion      = '002.00.02-17API'
-    minSdkVersion       = 17
-    targetSdkVersion    = 28
-    compileSdkVersion   = 29
-    buildToolsVersion   = '29.0.3'
-    javaVersion         = JavaVersion.VERSION_1_8
-    libVersionAndroidX  = '1.1.0'
-    libVersionGlide     = '4.11.0'
+    releaseVersionCode = Integer.parseInt("002000317", 10)
+    releaseVersion     = '002.00.03-17API'
+    javaVersion        = JavaVersion.VERSION_1_8
+    minSdkVersion      = 17
+    targetSdkVersion   = 28
+    compileSdkVersion  = 29
+    buildToolsVersion  = '29.0.3'
+
+    libVersionAndroidX = '1.1.0'
+    libVersionGlide    = '4.11.0'
 }

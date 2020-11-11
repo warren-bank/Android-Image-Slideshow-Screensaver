@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">স্লাইডেড স্ক্রীনসেভার</string>
+  <string name="image_content_description">ছবি</string>
+  <string name="pref_value_enabled">সক্রিয়</string>
+  <string name="pref_value_disabled">নিষ্ক্রিয়</string>
+  <string name="pref_settings_title">Slideshow সেটিংস</string>
+  <string name="pref_imageduration_title">সময়ের দুরত্ব (ms).</string>
+  <string name="pref_imageduration_dlg">সময়ের সময়কাল লিখুন (ms) ছবি প্রদর্শনের জন্য:</string>
+  <string name="pref_usemediastore_title">ব্যবহার করো MediaStore সরবরাহকারী.</string>
+  <string name="pref_usemediastore_dlg">ছবি দেখাও Android সংযুক্ত স্টোরেজ ডিভাইসের সূচী:</string>
+  <string name="pref_directoryselector_title">ডিরেক্টরি পাথ.</string>
+  <string name="pref_directoryselector_dlg">ডিরেক্টরি:</string>
+  <string name="pref_recursedirectory_title">সাবডিরেক্টরিতে পুনরাবৃত্তি করা হবে.</string>
+  <string name="pref_recursedirectory_dlg">সকল সাবডিরেক্টরি থেকে ছবি অন্তর্ভুক্ত করো:</string>
+  <string name="toast_storage_permission_denied">স্টোরেজ অনুমতির প্রয়োজন</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Diapresentatie screensaver</string>
+  <string name="image_content_description">Foto</string>
+  <string name="pref_value_enabled">Ingeschakeld</string>
+  <string name="pref_value_disabled">Uitgeschakeld</string>
+  <string name="pref_settings_title">Diapresent</string>
+  <string name="pref_imageduration_title">Duur van tijd (ms).</string>
+  <string name="pref_imageduration_dlg">Geef de tijdsduur op (ms) om afbeeldingen te tonen:</string>
+  <string name="pref_usemediastore_title">Gebruik MediaStore provider.</string>
+  <string name="pref_usemediastore_dlg">Afbeeldingen van de Android Index van aangesloten opslagapparaten:</string>
+  <string name="pref_directoryselector_title">Directorypad.</string>
+  <string name="pref_directoryselector_dlg">Adresboek:</string>
+  <string name="pref_recursedirectory_title">Recursief in subdirectory\'s.</string>
+  <string name="pref_recursedirectory_dlg">Afbeeldingen uit alle subdirectory\'s opnemen:</string>
+  <string name="toast_storage_permission_denied">Opslagmachtiging is vereist</string>
+</resources>

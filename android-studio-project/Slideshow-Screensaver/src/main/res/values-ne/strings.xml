@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">स्लाइड स्क्रीनसेभर</string>
+  <string name="image_content_description">फोटो</string>
+  <string name="pref_value_enabled">सक्षम पारिएको</string>
+  <string name="pref_value_disabled">अक्षम पारिएको</string>
+  <string name="pref_settings_title">स्लाइड सेटिङ</string>
+  <string name="pref_imageduration_title">समय अवधि (ms).</string>
+  <string name="pref_imageduration_dlg">समय अवधि प्रविष्ट गर्नुहोस् (ms) छविहरू प्रदर्शन गर्न:</string>
+  <string name="pref_usemediastore_title">प्रयोग गर्नुहोस् MediaStore प्रदायक.</string>
+  <string name="pref_usemediastore_dlg">यसबाट छविहरू देखाउनुहोस् Android संलग्न भण्डारण यन्त्रहरूको अनुक्रमणिका:</string>
+  <string name="pref_directoryselector_title">डाइरेक्टरी मार्ग.</string>
+  <string name="pref_directoryselector_dlg">डाइरेक्टरी:</string>
+  <string name="pref_recursedirectory_title">उपडाइरेक्टरीहरूमा पुनरावृत्ति गर्नुहोस्.</string>
+  <string name="pref_recursedirectory_dlg">सबै उपडाइरेक्टरीबाट छविहरू समावेश गर्नुहोस्:</string>
+  <string name="toast_storage_permission_denied">भण्डारण अनुमति आवश्यक छ</string>
+</resources>

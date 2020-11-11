@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">โปรแกรมรักษาจอภาพสไลด์โชว์</string>
+  <string name="image_content_description">ภาพถ่าย</string>
+  <string name="pref_value_enabled">ถูกเปิดใช้งาน</string>
+  <string name="pref_value_disabled">ปิดใช้งาน</string>
+  <string name="pref_settings_title">การตั้งค่าสไลด์โชว์</string>
+  <string name="pref_imageduration_title">ช่วงเวลา (ms).</string>
+  <string name="pref_imageduration_dlg">ป้อนระยะเวลา (ms) เพื่อแสดงอิมเมจ:</string>
+  <string name="pref_usemediastore_title">ใช้ MediaStore ตัวให้บริการ.</string>
+  <string name="pref_usemediastore_dlg">แสดงรูปภาพจาก Android ดัชนีของอุปกรณ์หน่วยเก็บข้อมูลที่เชื่อมต่อ:</string>
+  <string name="pref_directoryselector_title">พาธไปยัง.</string>
+  <string name="pref_directoryselector_dlg">ไดเร็กทอรี:</string>
+  <string name="pref_recursedirectory_title">Recurse ลงในไดเร็กทอรีย่อย.</string>
+  <string name="pref_recursedirectory_dlg">รวมรูปภาพจากไดเร็กทอรีย่อยทั้งหมด:</string>
+  <string name="toast_storage_permission_denied">ต้องการสิทธิ์หน่วยเก็บข้อมูล</string>
+</resources>

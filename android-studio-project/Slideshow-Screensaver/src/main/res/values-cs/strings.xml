@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Šetřič obrazovky Slideshow</string>
+  <string name="image_content_description">Fotografie</string>
+  <string name="pref_value_enabled">Povoleno</string>
+  <string name="pref_value_disabled">Deaktivováno</string>
+  <string name="pref_settings_title">Nastavení prezentace</string>
+  <string name="pref_imageduration_title">Doba trvání (ms).</string>
+  <string name="pref_imageduration_dlg">Zadejte dobu trvání (ms) pro zobrazení obrázků:</string>
+  <string name="pref_usemediastore_title">Použijte MediaStore poskytovatel.</string>
+  <string name="pref_usemediastore_dlg">Zobrazit obrázky z Android index připojených úložných zařízení:</string>
+  <string name="pref_directoryselector_title">Cesta k adresáři.</string>
+  <string name="pref_directoryselector_dlg">Adresář:</string>
+  <string name="pref_recursedirectory_title">Rekurse do podadresářů.</string>
+  <string name="pref_recursedirectory_dlg">Zahrnout obrázky ze všech podadresářů:</string>
+  <string name="toast_storage_permission_denied">Je vyžadováno oprávnění k ukládání.</string>
+</resources>

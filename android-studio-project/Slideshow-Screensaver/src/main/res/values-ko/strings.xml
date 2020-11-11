@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">슬라이드쇼 스크린세이버</string>
+  <string name="image_content_description">사진</string>
+  <string name="pref_value_enabled">사용 가능</string>
+  <string name="pref_value_disabled">사용 불가능</string>
+  <string name="pref_settings_title">슬라이드쇼</string>
+  <string name="pref_imageduration_title">시간 지속 기간 (ms).</string>
+  <string name="pref_imageduration_dlg">시간 지속 기간 입력 (ms) 이미지를 표시하다:</string>
+  <string name="pref_usemediastore_title">사용 MediaStore 제공자.</string>
+  <string name="pref_usemediastore_dlg">이미지를 표시합니다. Android 접속된 스토리지 디바이스의 인덱스:</string>
+  <string name="pref_directoryselector_title">디렉토리 경로.</string>
+  <string name="pref_directoryselector_dlg">디렉토리:</string>
+  <string name="pref_recursedirectory_title">서브디렉토리로의 반복.</string>
+  <string name="pref_recursedirectory_dlg">모든 서브디렉토리의 이미지 포함:</string>
+  <string name="toast_storage_permission_denied">스토리지 권한이 필요합니다.</string>
+</resources>

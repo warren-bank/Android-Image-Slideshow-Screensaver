@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">स्लाइडशो स्क्रीनसेवर</string>
+  <string name="image_content_description">फोटो</string>
+  <string name="pref_value_enabled">सक्षम</string>
+  <string name="pref_value_disabled">अक्षम</string>
+  <string name="pref_settings_title">स्लाइड शो</string>
+  <string name="pref_imageduration_title">समय अवधि (ms).</string>
+  <string name="pref_imageduration_dlg">समय अवधि भरें (ms) छवि प्रदर्शित करने:</string>
+  <string name="pref_usemediastore_title">इस्तेमाल करें MediaStore मुहैया कर्ता.</string>
+  <string name="pref_usemediastore_dlg">छवि दिखाएँ (S) Android संलग्न भंडारण उपकरणों का सूचकांक:</string>
+  <string name="pref_directoryselector_title">निर्देशिका पथ.</string>
+  <string name="pref_directoryselector_dlg">डिरेक्ट्री:</string>
+  <string name="pref_recursedirectory_title">सबडिरेक्ट्रियों में रिकर्ज.</string>
+  <string name="pref_recursedirectory_dlg">सभी उपनिर्देशिका से छवियाँ शामिल करें:</string>
+  <string name="toast_storage_permission_denied">भंडारण अनुमति जरूरी है</string>
+</resources>
