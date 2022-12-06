@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Répertoire:</string>
   <string name="pref_recursedirectory_title">Récupération dans les sous-répertoires.</string>
   <string name="pref_recursedirectory_dlg">Inclure les images de tous les sous-répertoires:</string>
+  <string name="pref_shuffle_title">Ordre aléatoire.</string>
+  <string name="pref_shuffle_dlg">Mélomly aléatoire de l\'ordre des images:</string>
   <string name="toast_storage_permission_denied">L\'autorisation de stockage est requise</string>
 </resources>

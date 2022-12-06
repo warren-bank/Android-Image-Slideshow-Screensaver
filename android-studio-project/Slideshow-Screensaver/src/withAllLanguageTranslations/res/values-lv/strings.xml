@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Mape:</string>
   <string name="pref_recursedirectory_title">Rekursē apakšdirektorijos.</string>
   <string name="pref_recursedirectory_dlg">Iekļaut attēlus no visām apakšdirektorijām:</string>
+  <string name="pref_shuffle_title">Gadījuma secība.</string>
+  <string name="pref_shuffle_dlg">Pēc nejaušās izvēles principa pēc attēliem:</string>
   <string name="toast_storage_permission_denied">Uzglabāšanas atļauja ir nepieciešama</string>
 </resources>

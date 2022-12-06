@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">ڈائرکٹری:</string>
   <string name="pref_recursedirectory_title">Subڈائریکٹریوں میں بھرتی.</string>
   <string name="pref_recursedirectory_dlg">تمام subڈائریکٹریوں کی جانب سے تصاویر شامل:</string>
+  <string name="pref_shuffle_title">رینڈم آرڈر.</string>
+  <string name="pref_shuffle_dlg">رینڈل شفل کو تصاویر کا حکم:</string>
   <string name="toast_storage_permission_denied">سٹوریج کی اجازت درکار ہے</string>
 </resources>

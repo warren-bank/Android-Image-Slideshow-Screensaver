@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Каталог:</string>
   <string name="pref_recursedirectory_title">Рекурсировать в подкаталоги.</string>
   <string name="pref_recursedirectory_dlg">Включить изображения из всех подкаталогов:</string>
+  <string name="pref_shuffle_title">Произвольный порядок.</string>
+  <string name="pref_shuffle_dlg">Случайным образом перетасовывая последовательность изображений:</string>
   <string name="toast_storage_permission_denied">Требуется разрешение на хранение</string>
 </resources>

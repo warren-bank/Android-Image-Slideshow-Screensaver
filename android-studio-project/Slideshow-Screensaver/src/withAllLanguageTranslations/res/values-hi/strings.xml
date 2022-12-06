@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">डिरेक्ट्री:</string>
   <string name="pref_recursedirectory_title">सबडिरेक्ट्रियों में रिकर्ज.</string>
   <string name="pref_recursedirectory_dlg">सभी उपनिर्देशिका से छवियाँ शामिल करें:</string>
+  <string name="pref_shuffle_title">बेतरतीब क्रम.</string>
+  <string name="pref_shuffle_dlg">बेतरतीब ढंग से छवियों के क्रम को उलट रहा है:</string>
   <string name="toast_storage_permission_denied">भंडारण अनुमति जरूरी है</string>
 </resources>

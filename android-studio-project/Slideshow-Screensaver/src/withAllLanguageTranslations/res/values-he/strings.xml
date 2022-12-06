@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">מדריך:</string>
   <string name="pref_recursedirectory_title">חזרה לתת-מדריכים.</string>
   <string name="pref_recursedirectory_dlg">הכללת תמונות מכל התת-מדריכים:</string>
+  <string name="pref_shuffle_title">סדר אקראי.</string>
+  <string name="pref_shuffle_dlg">דשדוש אקראי סדר התמונות:</string>
   <string name="toast_storage_permission_denied">דרושה הרשאת אחסון</string>
 </resources>

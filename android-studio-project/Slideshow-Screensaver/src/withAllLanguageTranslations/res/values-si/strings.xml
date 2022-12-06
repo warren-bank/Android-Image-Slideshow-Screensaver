@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">බහලුම:</string>
   <string name="pref_recursedirectory_title">උප-ඩිරෙක්ටරි බවට පත් කරන්න.</string>
   <string name="pref_recursedirectory_dlg">සියලු උප-ඩිරෙක්ටරි වලින් පින්තූර ඇතුලත් කරන්න:</string>
+  <string name="pref_shuffle_title">රැන්ඩම් ඇණවුම්.</string>
+  <string name="pref_shuffle_dlg">රූප රාශිය ඇණවුම් කරන්න:</string>
   <string name="toast_storage_permission_denied">ගබඩා අවසරයක් අවශ්ය වේ</string>
 </resources>

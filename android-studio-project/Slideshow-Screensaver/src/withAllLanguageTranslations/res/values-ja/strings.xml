@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">ディレクトリ:</string>
   <string name="pref_recursedirectory_title">サブディレクトリーへの再帰.</string>
   <string name="pref_recursedirectory_dlg">すべてのサブディレクトリーのイメージを含める:</string>
+  <string name="pref_shuffle_title">ランダムオーダー.</string>
+  <string name="pref_shuffle_dlg">イメージの順序を乱数的にシャッフルします:</string>
   <string name="toast_storage_permission_denied">ストレージ許可が必要です</string>
 </resources>

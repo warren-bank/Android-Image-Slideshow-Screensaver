@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Imenik:</string>
   <string name="pref_recursedirectory_title">Ponovno prekletstvo v podimenike.</string>
   <string name="pref_recursedirectory_dlg">Vključi slike iz vseh podimenikov:</string>
+  <string name="pref_shuffle_title">Naključno zaporedje.</string>
+  <string name="pref_shuffle_dlg">Naključno premešanje vrstnega reda slik:</string>
   <string name="toast_storage_permission_denied">Zahtevano je dovoljenje za shranjevanje</string>
 </resources>

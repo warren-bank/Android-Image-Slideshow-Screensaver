@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Директория::</string>
   <string name="pref_recursedirectory_title">Рекурсиране в поддиректории.</string>
   <string name="pref_recursedirectory_dlg">Включване на изображения от всички поддиректории:</string>
+  <string name="pref_shuffle_title">Случаен ред:.</string>
+  <string name="pref_shuffle_dlg">Произволно разбъркване на реда на изображенията:</string>
   <string name="toast_storage_permission_denied">Изисква се разрешение за съхранение</string>
 </resources>

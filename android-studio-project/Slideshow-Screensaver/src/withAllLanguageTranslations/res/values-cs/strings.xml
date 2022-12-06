@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Adresář:</string>
   <string name="pref_recursedirectory_title">Rekurse do podadresářů.</string>
   <string name="pref_recursedirectory_dlg">Zahrnout obrázky ze všech podadresářů:</string>
+  <string name="pref_shuffle_title">Náhodné pořadí.</string>
+  <string name="pref_shuffle_dlg">Náhodně zamíchat pořadí obrázků:</string>
   <string name="toast_storage_permission_denied">Je vyžadováno oprávnění k ukládání.</string>
 </resources>

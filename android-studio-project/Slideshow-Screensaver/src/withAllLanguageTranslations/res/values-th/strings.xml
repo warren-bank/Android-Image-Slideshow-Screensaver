@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">ไดเร็กทอรี:</string>
   <string name="pref_recursedirectory_title">Recurse ลงในไดเร็กทอรีย่อย.</string>
   <string name="pref_recursedirectory_dlg">รวมรูปภาพจากไดเร็กทอรีย่อยทั้งหมด:</string>
+  <string name="pref_shuffle_title">การเรียงลำดับแบบสุ่ม.</string>
+  <string name="pref_shuffle_dlg">สับเปลี่ยนลำดับของรูปภาพแบบสุ่ม:</string>
   <string name="toast_storage_permission_denied">ต้องการสิทธิ์หน่วยเก็บข้อมูล</string>
 </resources>

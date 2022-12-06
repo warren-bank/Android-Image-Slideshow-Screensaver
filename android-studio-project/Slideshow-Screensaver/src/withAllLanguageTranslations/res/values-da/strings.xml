@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Bibliotek:</string>
   <string name="pref_recursedirectory_title">Rekurse i underbiblioteker.</string>
   <string name="pref_recursedirectory_dlg">Inkludér billeder fra alle underbiblioteker:</string>
+  <string name="pref_shuffle_title">Tilfældig ordre.</string>
+  <string name="pref_shuffle_dlg">Tilfældigt omrokering af rækkefølgen af billeder:</string>
   <string name="toast_storage_permission_denied">Lagertilladelse er påkrævet</string>
 </resources>

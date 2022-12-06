@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">ഡയറക്ടറി:</string>
   <string name="pref_recursedirectory_title">ഉപഡയറക്ടറികളിലേയ്ക്കു് റിസര്സ് ചെയ്യുക.</string>
   <string name="pref_recursedirectory_dlg">എല്ലാ ഉപഡയറക്ടറികളില് നിന്നും ചിത്രങ്ങള് ഉള്പ്പെടുത്തുക:</string>
+  <string name="pref_shuffle_title">ക്രമരഹിതമായ ക്രമം.</string>
+  <string name="pref_shuffle_dlg">ചിത്രങ്ങളുടെ ക്രമം ക്രമരഹിതമായി ഷഫിൾ ചെയ്യുക:</string>
   <string name="toast_storage_permission_denied">സ്റ്റോറേജ് അനുവാദം ആവശ്യമാണ്</string>
 </resources>

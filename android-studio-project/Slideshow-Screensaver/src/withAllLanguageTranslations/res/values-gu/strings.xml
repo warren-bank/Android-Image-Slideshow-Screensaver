@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">ડિરેક્ટરી:</string>
   <string name="pref_recursedirectory_title">ઉપડિરેક્ટરીઓમાં પાછા મેળવો.</string>
   <string name="pref_recursedirectory_dlg">બધી ઉપડિરેક્ટરીઓમાંથી ચિત્રો સમાવો:</string>
+  <string name="pref_shuffle_title">રેન્ડમ ક્રમ.</string>
+  <string name="pref_shuffle_dlg">ચિત્રોની ક્રમમાં રેન્ડમ રીતે shuffle:</string>
   <string name="toast_storage_permission_denied">સંગ્રહ પરવાનગી જરૂરી છે</string>
 </resources>

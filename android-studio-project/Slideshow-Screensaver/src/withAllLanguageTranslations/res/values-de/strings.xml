@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Verzeichnis:</string>
   <string name="pref_recursedirectory_title">In Unterverzeichnissen rekursiv.</string>
   <string name="pref_recursedirectory_dlg">Bilder aus allen Unterverzeichnissen einschließen:</string>
+  <string name="pref_shuffle_title">Zufällige Reihenfolge.</string>
+  <string name="pref_shuffle_dlg">Sortieren der Reihenfolge der Bilder nach dem Zufallsprinzip:</string>
   <string name="toast_storage_permission_denied">Speicherberechtigung ist erforderlich</string>
 </resources>

@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">डाइरेक्टरी:</string>
   <string name="pref_recursedirectory_title">उपडाइरेक्टरीहरूमा पुनरावृत्ति गर्नुहोस्.</string>
   <string name="pref_recursedirectory_dlg">सबै उपडाइरेक्टरीबाट छविहरू समावेश गर्नुहोस्:</string>
+  <string name="pref_shuffle_title">अनियमित क्रम.</string>
+  <string name="pref_shuffle_dlg">अनियमित रूपमा छविको क्रमबद्ध गर्नुहोस्:</string>
   <string name="toast_storage_permission_denied">भण्डारण अनुमति आवश्यक छ</string>
 </resources>

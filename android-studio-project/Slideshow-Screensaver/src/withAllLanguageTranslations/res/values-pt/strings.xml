@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Diretório:</string>
   <string name="pref_recursedirectory_title">Recursar em subdiretórios.</string>
   <string name="pref_recursedirectory_dlg">Incluir imagens de todos os subdiretórios:</string>
+  <string name="pref_shuffle_title">Ordem aleatória.</string>
+  <string name="pref_shuffle_dlg">Embaralhe aleatoriamente a ordem das imagens:</string>
   <string name="toast_storage_permission_denied">Permissão de armazenamento é necessária</string>
 </resources>

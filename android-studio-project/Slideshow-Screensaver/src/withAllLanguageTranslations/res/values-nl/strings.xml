@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Adresboek:</string>
   <string name="pref_recursedirectory_title">Recursief in subdirectory\'s.</string>
   <string name="pref_recursedirectory_dlg">Afbeeldingen uit alle subdirectory\'s opnemen:</string>
+  <string name="pref_shuffle_title">Willekeurige volgorde.</string>
+  <string name="pref_shuffle_dlg">De volgorde van de afbeeldingen willekeurig schudden:</string>
   <string name="toast_storage_permission_denied">Opslagmachtiging is vereist</string>
 </resources>

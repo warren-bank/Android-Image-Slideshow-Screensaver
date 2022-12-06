@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Jedan direktorij.:</string>
   <string name="pref_recursedirectory_title">Vrati se u poddirektorije..</string>
   <string name="pref_recursedirectory_dlg">Uključi slike sa svih poddirektorija.:</string>
+  <string name="pref_shuffle_title">Slučajni poredak..</string>
+  <string name="pref_shuffle_dlg">Nasumično miješanje poretka slika.:</string>
   <string name="toast_storage_permission_denied">Potrebna je jedna dozvola za odlaganje.</string>
 </resources>

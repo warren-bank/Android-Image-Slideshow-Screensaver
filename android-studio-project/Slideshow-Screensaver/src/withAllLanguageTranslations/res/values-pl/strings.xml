@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Katalog:</string>
   <string name="pref_recursedirectory_title">Rekurencja do podkatalogów.</string>
   <string name="pref_recursedirectory_dlg">Uwzględnij obrazy ze wszystkich podkatalogów:</string>
+  <string name="pref_shuffle_title">Kolejność losowa.</string>
+  <string name="pref_shuffle_dlg">Losowe roztasowanie kolejności obrazów:</string>
   <string name="toast_storage_permission_denied">Uprawnienie do pamięci masowej jest wymagane</string>
 </resources>

@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">目錄:</string>
   <string name="pref_recursedirectory_title">遞迴至子目錄.</string>
   <string name="pref_recursedirectory_dlg">包括來自所有子目錄的影像:</string>
+  <string name="pref_shuffle_title">隨機順序.</string>
+  <string name="pref_shuffle_dlg">隨機調整影像順序:</string>
   <string name="toast_storage_permission_denied">需要儲存體許可權</string>
 </resources>

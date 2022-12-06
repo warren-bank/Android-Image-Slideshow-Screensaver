@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Директоријум:</string>
   <string name="pref_recursedirectory_title">Рекурзија у поддиректоријуме.</string>
   <string name="pref_recursedirectory_dlg">Обухвати слике из свих поддиректоријума:</string>
+  <string name="pref_shuffle_title">Насумично наређење.</string>
+  <string name="pref_shuffle_dlg">Насумично измешању редослед слика:</string>
   <string name="toast_storage_permission_denied">Потребна је дозвола за складиштење</string>
 </resources>

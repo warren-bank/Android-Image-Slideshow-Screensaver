@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Director:</string>
   <string name="pref_recursedirectory_title">Recurse în subdirectoare.</string>
   <string name="pref_recursedirectory_dlg">Includere imagini din toate subdirectoarele:</string>
+  <string name="pref_shuffle_title">Ordine aleatoare.</string>
+  <string name="pref_shuffle_dlg">Shuffle aleatoriu ordinea imaginilor:</string>
   <string name="toast_storage_permission_denied">Permisiunea de stocare este necesară</string>
 </resources>

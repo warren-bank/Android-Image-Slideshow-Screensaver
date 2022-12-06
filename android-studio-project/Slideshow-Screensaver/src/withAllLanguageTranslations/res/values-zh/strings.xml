@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">目录:</string>
   <string name="pref_recursedirectory_title">递归至子目录.</string>
   <string name="pref_recursedirectory_dlg">包含来自所有子目录的图像:</string>
+  <string name="pref_shuffle_title">随机顺序.</string>
+  <string name="pref_shuffle_dlg">随机地打乱图像的顺序:</string>
   <string name="toast_storage_permission_denied">存储许可权是必需的</string>
 </resources>

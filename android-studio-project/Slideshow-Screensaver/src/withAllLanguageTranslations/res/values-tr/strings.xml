@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Dizin:</string>
   <string name="pref_recursedirectory_title">Alt dizinlere özyinelemeli.</string>
   <string name="pref_recursedirectory_dlg">Tüm alt dizinlerdeki resimleri içer:</string>
+  <string name="pref_shuffle_title">Rasgele sipariş.</string>
+  <string name="pref_shuffle_dlg">Görüntülerin sırasını rasgele biçimde karıştırır:</string>
   <string name="toast_storage_permission_denied">Saklama izni gerekiyor</string>
 </resources>

@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Direktori:</string>
   <string name="pref_recursedirectory_title">Rekursif ke dalam subdirektori.</string>
   <string name="pref_recursedirectory_dlg">Sertakan gambar dari semua subdirektori:</string>
+  <string name="pref_shuffle_title">Urutan acak.</string>
+  <string name="pref_shuffle_dlg">Acak acak urutan gambar:</string>
   <string name="toast_storage_permission_denied">Izin penyimpanan diperlukan</string>
 </resources>

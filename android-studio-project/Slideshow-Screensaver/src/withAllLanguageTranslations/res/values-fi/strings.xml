@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Hakemisto:</string>
   <string name="pref_recursedirectory_title">Recurse-alihakemistot.</string>
   <string name="pref_recursedirectory_dlg">Sisällytä kuvat kaikista alihakemistoista:</string>
+  <string name="pref_shuffle_title">Satunnainen järjestys.</string>
+  <string name="pref_shuffle_dlg">Randomly sekoittaa kuvien järjestystä:</string>
   <string name="toast_storage_permission_denied">Varastointilupa on pakollinen</string>
 </resources>

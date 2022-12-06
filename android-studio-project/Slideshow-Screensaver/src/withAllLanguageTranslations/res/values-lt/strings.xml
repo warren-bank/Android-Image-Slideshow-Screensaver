@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Aplankas:</string>
   <string name="pref_recursedirectory_title">Rekurse į paaplankus.</string>
   <string name="pref_recursedirectory_dlg">Įtraukti vaizdus iš visų paaplankų:</string>
+  <string name="pref_shuffle_title">Atsitiktinė tvarka.</string>
+  <string name="pref_shuffle_dlg">Atsitiktinai suklaidinti atvaizdų užsakymą:</string>
   <string name="toast_storage_permission_denied">Leidimo saugoti nereikia</string>
 </resources>

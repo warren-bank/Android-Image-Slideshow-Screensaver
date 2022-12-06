@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Direttorju:</string>
   <string name="pref_recursedirectory_title">Recurse fis subdirettorji.</string>
   <string name="pref_recursedirectory_dlg">Inkludi immaġini minn subdirettorji kollha:</string>
+  <string name="pref_shuffle_title">Ordni każwali.</string>
+  <string name="pref_shuffle_dlg">Bl-addoċċ shuffle l-ordni ta \' immaġini:</string>
   <string name="toast_storage_permission_denied">Permess ta \' ħażna huwa meħtieġ</string>
 </resources>

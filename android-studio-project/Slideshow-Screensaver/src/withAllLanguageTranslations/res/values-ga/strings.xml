@@ -13,5 +13,7 @@
   <string name="pref_directoryselector_dlg">Comhadlann:</string>
   <string name="pref_recursedirectory_title">Athchúrsáil isteach i gcomhadlanna.</string>
   <string name="pref_recursedirectory_dlg">Cuir íomhánna ó gach fochomhadlann:</string>
+  <string name="pref_shuffle_title">Ordú randamach.</string>
+  <string name="pref_shuffle_dlg">Randón a mhúchadh an t-ordú íomhánna:</string>
   <string name="toast_storage_permission_denied">Tá cead stórála ag teastáil</string>
 </resources>
