@@ -43,6 +43,10 @@ public class SettingsHelper {
     return get_boolean(R.string.pref_recursedirectory_key, R.string.pref_recursedirectory_default);
   }
 
+  public boolean useShuffle() {
+    return get_boolean(R.string.pref_shuffle_key, R.string.pref_shuffle_default);
+  }
+
   private int get_integer(int resource_key, int resource_default) {
     String pref_value = get_string(resource_key, resource_default);
     return Integer.parseInt(pref_value, 10);

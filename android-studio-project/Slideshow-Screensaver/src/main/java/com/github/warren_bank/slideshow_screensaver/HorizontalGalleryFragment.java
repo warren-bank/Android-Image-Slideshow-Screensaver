@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.integration.recyclerview.RecyclerViewPreloader;
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 /** Displays media store data in a recycler view. */
@@ -107,7 +108,12 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     }
     else {
       boolean recurse = settings.useDirectoryRecursion();
+      boolean shuffle = settings.useShuffle();
       List<MediaStoreData> mediaStoreData = DirectoryHelper.getImagesInDirectory(directory, recurse);
+
+      if (shuffle)
+        Collections.shuffle(mediaStoreData);
+
       onLoadComplete(/* loader= */ null, mediaStoreData);
     }
 

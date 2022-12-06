@@ -32,5 +32,11 @@
       android:dialogTitle="@string/pref_recursedirectory_dlg"
       android:defaultValue="@string/pref_recursedirectory_default" />
 
+    <CheckBoxPreference
+      android:key="@string/pref_shuffle_key"
+      android:title="@string/pref_shuffle_title"
+      android:dialogTitle="@string/pref_shuffle_dlg"
+      android:defaultValue="@string/pref_shuffle_default" />
+
   </PreferenceCategory>
 </PreferenceScreen>

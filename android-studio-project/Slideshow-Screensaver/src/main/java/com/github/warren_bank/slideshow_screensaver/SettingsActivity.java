@@ -19,6 +19,7 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
   private String keypref_usemediastore;
   private String keypref_directoryselector;
   private String keypref_recursedirectory;
+  private String keypref_shuffle;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
     keypref_usemediastore     = getString(R.string.pref_usemediastore_key);
     keypref_directoryselector = getString(R.string.pref_directoryselector_key);
     keypref_recursedirectory  = getString(R.string.pref_recursedirectory_key);
+    keypref_shuffle           = getString(R.string.pref_shuffle_key);
 
     settingsFragment = new SettingsFragment();
     getFragmentManager()
@@ -79,6 +81,7 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
     updateSummaryB(sharedPreferences, keypref_usemediastore);
     updateSummary( sharedPreferences, keypref_directoryselector);
     updateSummaryB(sharedPreferences, keypref_recursedirectory);
+    updateSummaryB(sharedPreferences, keypref_shuffle);
 
     enable_directoryselector(sharedPreferences);
   }
@@ -103,6 +106,7 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
     if (
          key.equals(keypref_usemediastore)
       || key.equals(keypref_recursedirectory)
+      || key.equals(keypref_shuffle)
     ) {
       updateSummaryB(sharedPreferences, key);
     }
@@ -148,6 +152,7 @@ public class SettingsActivity extends Activity implements OnSharedPreferenceChan
 
     settingsFragment.findPreference(keypref_directoryselector).setEnabled(is_enabled);
     settingsFragment.findPreference(keypref_recursedirectory ).setEnabled(is_enabled);
+    settingsFragment.findPreference(keypref_shuffle          ).setEnabled(is_enabled);
   }
 
 }
