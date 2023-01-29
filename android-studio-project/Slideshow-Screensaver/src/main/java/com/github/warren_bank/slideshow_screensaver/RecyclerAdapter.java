@@ -26,6 +26,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
     implements ListPreloader.PreloadSizeProvider<MediaStoreData>,
         ListPreloader.PreloadModelProvider<MediaStoreData> {
 
+  private final Context context;
   private final List<MediaStoreData> data;
   private final int screenWidth;
   private final GlideRequest<Drawable> requestBuilder;
@@ -33,12 +34,12 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
   private int[] actualDimensions;
 
   RecyclerAdapter(Context context, List<MediaStoreData> data, GlideRequests glideRequests) {
-    this.data = data;
-    requestBuilder = glideRequests.asDrawable().fitCenter();
+    this.context        = context;
+    this.data           = data;
+    this.screenWidth    = getScreenWidth(context);
+    this.requestBuilder = glideRequests.asDrawable().fitCenter();
 
     setHasStableIds(true);
-
-    screenWidth = getScreenWidth(context);
   }
 
   @NonNull
@@ -70,10 +71,14 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
   public void onBindViewHolder(@NonNull ListViewHolder viewHolder, int position) {
     MediaStoreData current = data.get(position);
 
-    Key signature =
-        new MediaStoreSignature(current.mimeType, current.dateModified, current.orientation);
+    Key signature = new MediaStoreSignature(current.mimeType, current.dateModified, current.orientation);
 
-    requestBuilder.clone().signature(signature).load(current.uri).into(viewHolder.image);
+    try {
+      requestBuilder.clone().signature(signature).load(current.uri).into(viewHolder.image);
+    }
+    catch(Exception e) {
+      viewHolder.image.setImageDrawable(context.getResources().getDrawable(R.drawable.launcher));
+    }
   }
 
   @Override

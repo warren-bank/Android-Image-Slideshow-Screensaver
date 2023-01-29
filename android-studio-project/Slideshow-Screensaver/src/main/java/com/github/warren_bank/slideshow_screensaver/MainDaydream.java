@@ -30,23 +30,27 @@ public class MainDaydream extends DreamService {
   public void onDreamingStarted() {
     super.onDreamingStarted();
 
-    fragment.onResume();
+    if (fragment != null)
+      fragment.onResume();
   }
 
   @Override
   public void onDreamingStopped() {
     super.onDreamingStopped();
 
-    fragment.onPause();
+    if (fragment != null)
+      fragment.onPause();
   }
 
   @Override
   public void onDetachedFromWindow() {
     super.onDetachedFromWindow();
 
-    fragment.onDestroyView();
-    fragment.onDestroy();
-    fragment = null;
+    if (fragment != null) {
+      fragment.onDestroyView();
+      fragment.onDestroy();
+      fragment = null;
+    }
   }
 
 }
