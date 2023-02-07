@@ -28,17 +28,16 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
 
   private final Context context;
   private final List<MediaStoreData> data;
-  private final int screenWidth;
   private final GlideRequest<Drawable> requestBuilder;
 
-  private int[] actualDimensions;
+  private int[] screenDimensions;
 
   RecyclerAdapter(Context context, List<MediaStoreData> data, GlideRequests glideRequests) {
     this.context        = context;
     this.data           = data;
-    this.screenWidth    = getScreenWidth(context);
     this.requestBuilder = glideRequests.asDrawable().fitCenter();
 
+    updateOrientation(/* usePortraitOrientation= */ true);
     setHasStableIds(true);
   }
 
@@ -47,33 +46,22 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
   public ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
     LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
     final View view = inflater.inflate(R.layout.recycler_item, viewGroup, false);
-    view.getLayoutParams().width = screenWidth;
-
-    if (actualDimensions == null) {
-      view.getViewTreeObserver()
-          .addOnPreDrawListener(
-              new ViewTreeObserver.OnPreDrawListener() {
-                @Override
-                public boolean onPreDraw() {
-                  if (actualDimensions == null) {
-                    actualDimensions = new int[] {view.getWidth(), view.getHeight()};
-                  }
-                  view.getViewTreeObserver().removeOnPreDrawListener(this);
-                  return true;
-                }
-              });
-    }
 
     return new ListViewHolder(view);
   }
 
   @Override
   public void onBindViewHolder(@NonNull ListViewHolder viewHolder, int position) {
-    MediaStoreData current = data.get(position);
+    if (viewHolder == null)
+      return;
 
-    Key signature = new MediaStoreSignature(current.mimeType, current.dateModified, current.orientation);
+    if (screenDimensions != null)
+      viewHolder.updateFrameWidth(screenDimensions[0]);
 
     try {
+      MediaStoreData current = data.get(position);
+      Key signature          = new MediaStoreSignature(current.mimeType, current.dateModified, current.orientation);
+
       requestBuilder.clone().signature(signature).load(current.uri).into(viewHolder.image);
     }
     catch(Exception e) {
@@ -114,19 +102,27 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
 
   @Nullable
   @Override
-  public int[] getPreloadSize(
-      @NonNull MediaStoreData item, int adapterPosition, int perItemPosition) {
-    return actualDimensions;
+  public int[] getPreloadSize(@NonNull MediaStoreData item, int adapterPosition, int perItemPosition) {
+    return screenDimensions;
   }
 
-  // Display#getSize(Point)
+  public void updateOrientation(boolean usePortraitOrientation) {
+    screenDimensions = getScreenDimensions(context, usePortraitOrientation);
+  }
+
+  /*
+   * return: [width, height]
+   */
   @SuppressWarnings("deprecation")
-  private static int getScreenWidth(Context context) {
+  private static int[] getScreenDimensions(Context context, boolean usePortraitOrientation) {
     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
     Display display = Preconditions.checkNotNull(wm).getDefaultDisplay();
     Point size = new Point();
     display.getSize(size);
-    return size.x;
+    int[] screenDimensions = usePortraitOrientation
+      ? new int[]{ Math.min(size.x, size.y), Math.max(size.x, size.y) }  // portrait
+      : new int[]{ Math.max(size.x, size.y), Math.min(size.x, size.y) }; // landscape
+    return screenDimensions;
   }
 
   /**
@@ -135,11 +131,17 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
    */
   static final class ListViewHolder extends RecyclerView.ViewHolder {
 
+    private final View      frame;
     private final ImageView image;
 
     ListViewHolder(View itemView) {
       super(itemView);
+      frame = itemView;
       image = itemView.findViewById(R.id.image);
+    }
+
+    public void updateFrameWidth(int width) {
+      frame.getLayoutParams().width = width;
     }
   }
 }

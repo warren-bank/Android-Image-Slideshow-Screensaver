@@ -1,15 +1,19 @@
 package com.github.warren_bank.slideshow_screensaver;
 
+import com.github.warren_bank.slideshow_screensaver.utils.SensorOrientationChangeNotifier;
+
+import android.content.pm.ActivityInfo;
 import android.service.dreams.DreamService;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import com.bumptech.glide.MemoryCategory;
 
 /** Displays a {@link HorizontalGalleryFragment}. */
 @RequiresApi(17)
-public class MainDaydream extends DreamService {
+public class MainDaydream extends DreamService implements SensorOrientationChangeNotifier.Listener {
   private Fragment fragment;
 
   @Override
@@ -30,8 +34,11 @@ public class MainDaydream extends DreamService {
   public void onDreamingStarted() {
     super.onDreamingStarted();
 
-    if (fragment != null)
+    if (fragment != null) {
       fragment.onResume();
+
+      SensorOrientationChangeNotifier.getInstance(this).addListener(this);
+    }
   }
 
   @Override
@@ -40,6 +47,8 @@ public class MainDaydream extends DreamService {
 
     if (fragment != null)
       fragment.onPause();
+
+    SensorOrientationChangeNotifier.getInstance(this).remove(this);
   }
 
   @Override
@@ -50,6 +59,27 @@ public class MainDaydream extends DreamService {
       fragment.onDestroyView();
       fragment.onDestroy();
       fragment = null;
+    }
+  }
+
+  @Override
+  public void onWindowAttributesChanged(WindowManager.LayoutParams attrs) {
+    super.onWindowAttributesChanged(attrs);
+
+    if ((fragment != null) && (fragment instanceof HorizontalGalleryFragment)) {
+      boolean usePortraitOrientation = (attrs.screenOrientation != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+      ((HorizontalGalleryFragment)fragment).updateOrientation(usePortraitOrientation);
+    }
+  }
+
+  /*
+   * interface: SensorOrientationChangeNotifier.Listener
+   */
+  @Override
+  public void onOrientationChange(int orientation) {
+    if ((fragment != null) && (fragment instanceof HorizontalGalleryFragment)) {
+      boolean usePortraitOrientation = SensorOrientationChangeNotifier.getInstance(this).isPortrait();
+      ((HorizontalGalleryFragment)fragment).updateOrientation(usePortraitOrientation);
     }
   }
 

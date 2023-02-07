@@ -2,6 +2,7 @@ package com.github.warren_bank.slideshow_screensaver;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.GestureDetector;
@@ -24,9 +25,11 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
 
   private Context context;
   private RecyclerView recyclerView;
-  private SettingsHelper settings;
   private boolean forceRefresh;
   private GestureDetector gestures;
+  private boolean usePortraitOrientation;
+  private SettingsHelper settings;
+  private RecyclerAdapter adapter;
 
   public HorizontalGalleryFragment() {
     this((Context) null);
@@ -89,6 +92,9 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   }
 
   private void init() {
+    usePortraitOrientation = true;
+    updateOrientation(getResources().getConfiguration().orientation);
+
     settings = new SettingsHelper(/* context= */ getContext());
 
     boolean use_mediastore = settings.useMediaStore();
@@ -138,12 +144,12 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   @Override
   public void onLoadComplete(Loader<List<MediaStoreData>> loader, List<MediaStoreData> mediaStoreData) {
     GlideRequests glideRequests = GlideApp.with(getContext());
-    RecyclerAdapter adapter = new RecyclerAdapter(getContext(), mediaStoreData, glideRequests);
+    adapter = new RecyclerAdapter(getContext(), mediaStoreData, glideRequests);
     RecyclerViewPreloader<MediaStoreData> preloader = new RecyclerViewPreloader<>(glideRequests, adapter, adapter, 3);
     recyclerView.addOnScrollListener(preloader);
     recyclerView.setAdapter(adapter);
 
-    initSlideshow(adapter);
+    initSlideshow();
   }
 
   private boolean        slideshow_running;
@@ -152,7 +158,7 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   private Handler        handler;
   private Runnable       slideshow;
 
-  private void initSlideshow(RecyclerAdapter adapter) {
+  private void initSlideshow() {
     if (adapter == null) {
       slideshow_running = false;
       return;
@@ -205,6 +211,27 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     if ((handler != null) && slideshow_running) {
       handler.removeCallbacks(slideshow);
       slideshow_running = false;
+    }
+  }
+
+  @Override
+  public void onConfigurationChanged(Configuration newConfig) {
+    super.onConfigurationChanged(newConfig);
+
+    updateOrientation(newConfig.orientation);
+  }
+
+  private void updateOrientation(int newOrientation) {
+    boolean usePortraitOrientation = (newOrientation != Configuration.ORIENTATION_LANDSCAPE);
+    updateOrientation(usePortraitOrientation);
+  }
+
+  public void updateOrientation(boolean usePortraitOrientation) {
+    if (this.usePortraitOrientation != usePortraitOrientation) {
+      this.usePortraitOrientation = usePortraitOrientation;
+
+      adapter.updateOrientation(usePortraitOrientation);
+      recyclerView.requestLayout();
     }
   }
 }
