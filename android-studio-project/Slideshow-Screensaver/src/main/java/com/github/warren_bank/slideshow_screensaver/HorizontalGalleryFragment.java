@@ -93,12 +93,10 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
 
   private void init() {
     usePortraitOrientation = true;
-    updateOrientation(getResources().getConfiguration().orientation);
-
-    settings = new SettingsHelper(/* context= */ getContext());
+    settings               = new SettingsHelper(/* context= */ getContext());
 
     boolean use_mediastore = settings.useMediaStore();
-    File directory = null;
+    File directory         = null;
 
     if (!use_mediastore) {
       directory = settings.getDirectory();
@@ -148,6 +146,8 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     RecyclerViewPreloader<MediaStoreData> preloader = new RecyclerViewPreloader<>(glideRequests, adapter, adapter, 3);
     recyclerView.addOnScrollListener(preloader);
     recyclerView.setAdapter(adapter);
+
+    updateOrientation(getResources().getConfiguration().orientation);
 
     initSlideshow();
   }
