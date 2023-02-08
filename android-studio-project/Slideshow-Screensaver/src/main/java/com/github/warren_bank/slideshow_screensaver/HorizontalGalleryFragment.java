@@ -1,5 +1,13 @@
 package com.github.warren_bank.slideshow_screensaver;
 
+import com.bumptech.glide.integration.recyclerview.RecyclerViewPreloader;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.loader.content.Loader;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -10,12 +18,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.loader.content.Loader;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.integration.recyclerview.RecyclerViewPreloader;
+
 import java.io.File;
 import java.util.Collections;
 import java.util.List;
@@ -147,8 +150,7 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     recyclerView.addOnScrollListener(preloader);
     recyclerView.setAdapter(adapter);
 
-    updateOrientation(getResources().getConfiguration().orientation);
-
+    updateOrientation();
     initSlideshow();
   }
 
@@ -193,6 +195,8 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
   public void onResume() {
     super.onResume();
 
+    updateOrientation();
+
     if ((handler != null) && !slideshow_running) {
       handler.postDelayed(slideshow, duration);
       slideshow_running = true;
@@ -221,6 +225,10 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
     updateOrientation(newConfig.orientation);
   }
 
+  private void updateOrientation() {
+    updateOrientation(getResources().getConfiguration().orientation);
+  }
+
   private void updateOrientation(int newOrientation) {
     boolean usePortraitOrientation = (newOrientation != Configuration.ORIENTATION_LANDSCAPE);
     updateOrientation(usePortraitOrientation);
@@ -231,7 +239,13 @@ public class HorizontalGalleryFragment extends Fragment implements Loader.OnLoad
       this.usePortraitOrientation = usePortraitOrientation;
 
       adapter.updateOrientation(usePortraitOrientation);
-      recyclerView.requestLayout();
+
+      LinearLayoutManager layoutManager  = (LinearLayoutManager) recyclerView.getLayoutManager();
+      int position                       = layoutManager.findFirstVisibleItemPosition();
+      RecyclerView.ViewHolder viewHolder = recyclerView.findViewHolderForAdapterPosition(position);
+
+      if (viewHolder instanceof RecyclerAdapter.ListViewHolder)
+        adapter.updateFrameWidth((RecyclerAdapter.ListViewHolder)viewHolder);
     }
   }
 }

@@ -1,12 +1,14 @@
 package com.github.warren_bank.slideshow_screensaver;
 
+import androidx.loader.content.AsyncTaskLoader;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
-import androidx.loader.content.AsyncTaskLoader;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

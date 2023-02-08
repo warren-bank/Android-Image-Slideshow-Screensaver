@@ -1,5 +1,15 @@
 package com.github.warren_bank.slideshow_screensaver;
 
+import com.bumptech.glide.ListPreloader;
+import com.bumptech.glide.RequestBuilder;
+import com.bumptech.glide.load.Key;
+import com.bumptech.glide.signature.MediaStoreSignature;
+import com.bumptech.glide.util.Preconditions;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Context;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
@@ -10,14 +20,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
-import com.bumptech.glide.ListPreloader;
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.load.Key;
-import com.bumptech.glide.signature.MediaStoreSignature;
-import com.bumptech.glide.util.Preconditions;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -52,11 +55,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
 
   @Override
   public void onBindViewHolder(@NonNull ListViewHolder viewHolder, int position) {
-    if (viewHolder == null)
-      return;
-
-    if (screenDimensions != null)
-      viewHolder.updateFrameWidth(screenDimensions[0]);
+    updateFrameWidth(viewHolder);
 
     try {
       MediaStoreData current = data.get(position);
@@ -110,6 +109,11 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
     screenDimensions = getScreenDimensions(context, usePortraitOrientation);
   }
 
+  public void updateFrameWidth(@NonNull ListViewHolder viewHolder) {
+    if (screenDimensions != null)
+      viewHolder.updateFrameWidth(screenDimensions[0]);
+  }
+
   /*
    * return: [width, height]
    */
@@ -142,6 +146,7 @@ class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListViewHolde
 
     public void updateFrameWidth(int width) {
       frame.getLayoutParams().width = width;
+      frame.requestLayout();
     }
   }
 }

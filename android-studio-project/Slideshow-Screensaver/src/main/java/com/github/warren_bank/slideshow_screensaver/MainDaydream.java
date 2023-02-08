@@ -2,14 +2,16 @@ package com.github.warren_bank.slideshow_screensaver;
 
 import com.github.warren_bank.slideshow_screensaver.utils.SensorOrientationChangeNotifier;
 
+import com.bumptech.glide.MemoryCategory;
+
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
+
 import android.content.pm.ActivityInfo;
 import android.service.dreams.DreamService;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import androidx.annotation.RequiresApi;
-import androidx.fragment.app.Fragment;
-import com.bumptech.glide.MemoryCategory;
 
 /** Displays a {@link HorizontalGalleryFragment}. */
 @RequiresApi(17)
