@@ -1,7 +1,7 @@
 project.ext {
   applicationId      = 'com.github.warren_bank.slideshow_screensaver'
-  releaseVersionCode = Integer.parseInt("002010517", 10)  //Integer.MAX_VALUE == 2147483647
-  releaseVersion     = '002.01.05-17API'
+  releaseVersionCode = Integer.parseInt("002010617", 10)  //Integer.MAX_VALUE == 2147483647
+  releaseVersion     = '002.01.06-17API'
   javaVersion        = JavaVersion.VERSION_1_8
   minSdkVersion      = 17
   targetSdkVersion   = 35
